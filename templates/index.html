@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>📉 주가 하락 후 상승 분석기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 60px;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">📉 52주 고점 대비 하락 후 📈 상승 분석기</h2>
+        <form method="POST" class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">종목 티커 (예: AAPL)</label>
+                <input type="text" name="ticker" class="form-control" required value="{{ form_data.ticker }}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">하락률 (%)</label>
+                <input type="number" name="drawdown" step="0.1" class="form-control" required value="{{ form_data.drawdown }}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">목표 상승률 (%)</label>
+                <input type="number" name="target" step="0.1" class="form-control" required value="{{ form_data.target }}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">상승 확인 기간 (일)</label>
+                <input type="number" name="days" class="form-control" required value="{{ form_data.days }}">
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary mt-3">분석 시작</button>
+            </div>
+        </form>
+
+        {% if result %}
+            {% if result.error %}
+                <div class="alert alert-danger mt-4">{{ result.error }}</div>
+            {% else %}
+                <hr class="my-4">
+                <h4>📊 {{ result.ticker }} 분석 결과</h4>
+
+                <div class="row row-cols-1 row-cols-md-2 g-3 mt-3">
+                    <div class="col">
+                        <div class="border rounded p-3 bg-light">
+                            <strong>총 하락 시점:</strong> {{ result.total_cases }}회
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border rounded p-3 bg-light">
+                            <strong>{{ result.days }}일 내 {{ result.target }}% 상승 성공:</strong> {{ result.success_cases }}회
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border rounded p-3 bg-light">
+                            <strong>✅ 성공 확률:</strong> {{ result.success_rate }}%
+                        </div>
+                    </div>
+                    {% if result.avg_days %}
+                    <div class="col">
+                        <div class="border rounded p-3 bg-light">
+                            <strong>📅 평균 달성일수:</strong> {{ result.avg_days }}일
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="col">
+                        <div class="border rounded p-3 bg-light">
+                            <strong>📅 현재 날짜:</strong> {{ result.current_date }}
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border rounded p-3 bg-light">
+                            <strong>💰 현재 종가:</strong> {{ result.current_close }}
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive mt-4">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-light">
+                            <tr>
+                                <th>매수일</th>
+                                <th>매수가</th>
+                                <th>목표가</th>
+                                <th>달성일</th>
+                                <th>달성일수</th>
+                                <th>달성 여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in result.paged_table %}
+                            <tr>
+                                <td>{{ row.buy_date }}</td>
+                                <td>{{ row.buy_price }}</td>
+                                <td>{{ row.target_price }}</td>
+                                <td>{{ row.achieve_date or '-' }}</td>
+                                <td>{{ row.days_to_achieve or '-' }}</td>
+                                <td>
+                                    {% if row.achieved %}
+                                        <span class="badge bg-success">성공</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">실패</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% if result.total_pages > 1 %}
+                        <nav class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                {% for p in range(1, result.total_pages + 1) %}
+                                    <li class="page-item {% if p == result.current_page %}active{% endif %}">
+                                        <form method="post" action="/?page={{ p }}" style="display:inline;">
+                                            <input type="hidden" name="ticker" value="{{ form_data.ticker }}">
+                                            <input type="hidden" name="drawdown" value="{{ form_data.drawdown }}">
+                                            <input type="hidden" name="target" value="{{ form_data.target }}">
+                                            <input type="hidden" name="days" value="{{ form_data.days }}">
+                                            <button type="submit" class="page-link">{{ p }}</button>
+                                        </form>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                        {% endif %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

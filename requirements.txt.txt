@@ -1,0 +1,4 @@
+Flask
+yfinance
+pandas
+numpy
