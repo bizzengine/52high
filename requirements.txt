@@ -2,3 +2,4 @@ Flask
 yfinance
 pandas
 numpy
+gunicorn
