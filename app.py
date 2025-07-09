@@ -1,11 +1,15 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import yfinance as yf
 import pandas as pd
 import numpy as np
+import json
 from datetime import timedelta
-import math  # ← 페이지 수 계산용
+import math
 
 app = Flask(__name__)
+
+with open('tickers.json', 'r', encoding='utf-8') as f:
+    ticker_data = json.load(f)
 
 def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
     data = yf.download(ticker, start='2020-01-01', end='2030-07-01', auto_adjust=False)
@@ -79,6 +83,15 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
         'current_close': current_close,
         'current_date': current_date
     }
+
+@app.route('/search')
+def search():
+    query = request.args.get('q', '').lower()
+    results = [
+        t for t in ticker_data
+        if query in t['symbol'].lower()
+    ]
+    return jsonify(results[:20])
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

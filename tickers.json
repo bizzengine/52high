@@ -1,0 +1,4502 @@
+[
+  {
+    "symbol": "NVDA",
+    "name": "NVIDIA",
+    "rank": 1
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft",
+    "rank": 2
+  },
+  {
+    "symbol": "AAPL",
+    "name": "Apple",
+    "rank": 3
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon",
+    "rank": 4
+  },
+  {
+    "symbol": "GOOG",
+    "name": "Alphabet (Google)",
+    "rank": 5
+  },
+  {
+    "symbol": "META",
+    "name": "Meta Platforms (Facebook)",
+    "rank": 6
+  },
+  {
+    "symbol": "AVGO",
+    "name": "Broadcom",
+    "rank": 7
+  },
+  {
+    "symbol": "BRK-B",
+    "name": "Berkshire Hathaway",
+    "rank": 8
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla",
+    "rank": 9
+  },
+  {
+    "symbol": "JPM",
+    "name": "JPMorgan Chase",
+    "rank": 10
+  },
+  {
+    "symbol": "WMT",
+    "name": "Walmart",
+    "rank": 11
+  },
+  {
+    "symbol": "LLY",
+    "name": "Eli Lilly",
+    "rank": 12
+  },
+  {
+    "symbol": "V",
+    "name": "Visa",
+    "rank": 13
+  },
+  {
+    "symbol": "ORCL",
+    "name": "Oracle",
+    "rank": 14
+  },
+  {
+    "symbol": "NFLX",
+    "name": "Netflix",
+    "rank": 15
+  },
+  {
+    "symbol": "MA",
+    "name": "Mastercard",
+    "rank": 16
+  },
+  {
+    "symbol": "XOM",
+    "name": "Exxon Mobil",
+    "rank": 17
+  },
+  {
+    "symbol": "COST",
+    "name": "Costco",
+    "rank": 18
+  },
+  {
+    "symbol": "JNJ",
+    "name": "Johnson & Johnson",
+    "rank": 19
+  },
+  {
+    "symbol": "PG",
+    "name": "Procter & Gamble",
+    "rank": 20
+  },
+  {
+    "symbol": "HD",
+    "name": "Home Depot",
+    "rank": 21
+  },
+  {
+    "symbol": "BAC",
+    "name": "Bank of America",
+    "rank": 22
+  },
+  {
+    "symbol": "ABBV",
+    "name": "AbbVie",
+    "rank": 23
+  },
+  {
+    "symbol": "PLTR",
+    "name": "Palantir",
+    "rank": 24
+  },
+  {
+    "symbol": "KO",
+    "name": "Coca-Cola",
+    "rank": 25
+  },
+  {
+    "symbol": "UNH",
+    "name": "UnitedHealth",
+    "rank": 26
+  },
+  {
+    "symbol": "PM",
+    "name": "Philip Morris International",
+    "rank": 27
+  },
+  {
+    "symbol": "CSCO",
+    "name": "Cisco",
+    "rank": 28
+  },
+  {
+    "symbol": "IBM",
+    "name": "IBM",
+    "rank": 29
+  },
+  {
+    "symbol": "TMUS",
+    "name": "T-Mobile US",
+    "rank": 30
+  },
+  {
+    "symbol": "WFC",
+    "name": "Wells Fargo",
+    "rank": 31
+  },
+  {
+    "symbol": "CVX",
+    "name": "Chevron",
+    "rank": 32
+  },
+  {
+    "symbol": "GE",
+    "name": "General Electric",
+    "rank": 33
+  },
+  {
+    "symbol": "CRM",
+    "name": "Salesforce",
+    "rank": 34
+  },
+  {
+    "symbol": "ABT",
+    "name": "Abbott Laboratories",
+    "rank": 35
+  },
+  {
+    "symbol": "MS",
+    "name": "Morgan Stanley",
+    "rank": 36
+  },
+  {
+    "symbol": "AMD",
+    "name": "AMD",
+    "rank": 37
+  },
+  {
+    "symbol": "AXP",
+    "name": "American Express",
+    "rank": 38
+  },
+  {
+    "symbol": "DIS",
+    "name": "Walt Disney",
+    "rank": 39
+  },
+  {
+    "symbol": "INTU",
+    "name": "Intuit",
+    "rank": 40
+  },
+  {
+    "symbol": "GS",
+    "name": "Goldman Sachs",
+    "rank": 41
+  },
+  {
+    "symbol": "NOW",
+    "name": "ServiceNow",
+    "rank": 42
+  },
+  {
+    "symbol": "MCD",
+    "name": "McDonald",
+    "rank": 43
+  },
+  {
+    "symbol": "MRK",
+    "name": "Merck",
+    "rank": 44
+  },
+  {
+    "symbol": "UBER",
+    "name": "Uber",
+    "rank": 45
+  },
+  {
+    "symbol": "T",
+    "name": "AT&T",
+    "rank": 46
+  },
+  {
+    "symbol": "TXN",
+    "name": "Texas Instruments",
+    "rank": 47
+  },
+  {
+    "symbol": "RTX",
+    "name": "RTX",
+    "rank": 48
+  },
+  {
+    "symbol": "BX",
+    "name": "Blackstone Group",
+    "rank": 49
+  },
+  {
+    "symbol": "ISRG",
+    "name": "Intuitive Surgical",
+    "rank": 50
+  },
+  {
+    "symbol": "BKNG",
+    "name": "Booking Holdings (Booking.com)",
+    "rank": 51
+  },
+  {
+    "symbol": "CAT",
+    "name": "Caterpillar",
+    "rank": 52
+  },
+  {
+    "symbol": "PEP",
+    "name": "Pepsico",
+    "rank": 53
+  },
+  {
+    "symbol": "VZ",
+    "name": "Verizon",
+    "rank": 54
+  },
+  {
+    "symbol": "QCOM",
+    "name": "QUALCOMM",
+    "rank": 55
+  },
+  {
+    "symbol": "SCHW",
+    "name": "Charles Schwab",
+    "rank": 56
+  },
+  {
+    "symbol": "BLK",
+    "name": "BlackRock",
+    "rank": 57
+  },
+  {
+    "symbol": "BA",
+    "name": "Boeing",
+    "rank": 58
+  },
+  {
+    "symbol": "ADBE",
+    "name": "Adobe",
+    "rank": 59
+  },
+  {
+    "symbol": "SPGI",
+    "name": "S&P Global",
+    "rank": 60
+  },
+  {
+    "symbol": "TMO",
+    "name": "Thermo Fisher Scientific",
+    "rank": 61
+  },
+  {
+    "symbol": "C",
+    "name": "Citigroup",
+    "rank": 62
+  },
+  {
+    "symbol": "AMGN",
+    "name": "Amgen",
+    "rank": 63
+  },
+  {
+    "symbol": "AMAT",
+    "name": "Applied Materials",
+    "rank": 64
+  },
+  {
+    "symbol": "HON",
+    "name": "Honeywell",
+    "rank": 65
+  },
+  {
+    "symbol": "BSX",
+    "name": "Boston Scientific",
+    "rank": 66
+  },
+  {
+    "symbol": "NEE",
+    "name": "Nextera Energy",
+    "rank": 67
+  },
+  {
+    "symbol": "SYK",
+    "name": "Stryker Corporation",
+    "rank": 68
+  },
+  {
+    "symbol": "PGR",
+    "name": "Progressive",
+    "rank": 69
+  },
+  {
+    "symbol": "PFE",
+    "name": "Pfizer",
+    "rank": 70
+  },
+  {
+    "symbol": "GEV",
+    "name": "GE Vernova",
+    "rank": 71
+  },
+  {
+    "symbol": "DHR",
+    "name": "Danaher",
+    "rank": 72
+  },
+  {
+    "symbol": "UNP",
+    "name": "Union Pacific Corporation",
+    "rank": 73
+  },
+  {
+    "symbol": "TJX",
+    "name": "TJX Companies",
+    "rank": 74
+  },
+  {
+    "symbol": "MU",
+    "name": "Micron Technology",
+    "rank": 75
+  },
+  {
+    "symbol": "COF",
+    "name": "Capital One",
+    "rank": 76
+  },
+  {
+    "symbol": "GILD",
+    "name": "Gilead Sciences",
+    "rank": 77
+  },
+  {
+    "symbol": "DE",
+    "name": "Deere &amp; Company (John Deere)",
+    "rank": 78
+  },
+  {
+    "symbol": "PANW",
+    "name": "Palo Alto Networks",
+    "rank": 79
+  },
+  {
+    "symbol": "CMCSA",
+    "name": "Comcast",
+    "rank": 80
+  },
+  {
+    "symbol": "ANET",
+    "name": "Arista Networks",
+    "rank": 81
+  },
+  {
+    "symbol": "LRCX",
+    "name": "Lam Research",
+    "rank": 82
+  },
+  {
+    "symbol": "KKR",
+    "name": "KKR & Co.",
+    "rank": 83
+  },
+  {
+    "symbol": "CRWD",
+    "name": "CrowdStrike",
+    "rank": 84
+  },
+  {
+    "symbol": "LOW",
+    "name": "Lowe's Companies",
+    "rank": 85
+  },
+  {
+    "symbol": "ADP",
+    "name": "Automatic Data Processing",
+    "rank": 86
+  },
+  {
+    "symbol": "ADI",
+    "name": "Analog Devices",
+    "rank": 87
+  },
+  {
+    "symbol": "KLAC",
+    "name": "KLA",
+    "rank": 88
+  },
+  {
+    "symbol": "COP",
+    "name": "ConocoPhillips",
+    "rank": 89
+  },
+  {
+    "symbol": "VRTX",
+    "name": "Vertex Pharmaceuticals",
+    "rank": 90
+  },
+  {
+    "symbol": "APH",
+    "name": "Amphenol",
+    "rank": 91
+  },
+  {
+    "symbol": "APP",
+    "name": "AppLovin",
+    "rank": 92
+  },
+  {
+    "symbol": "MSTR",
+    "name": "Strategy \n (MicroStrategy)",
+    "rank": 93
+  },
+  {
+    "symbol": "NKE",
+    "name": "Nike",
+    "rank": 94
+  },
+  {
+    "symbol": "LMT",
+    "name": "Lockheed Martin",
+    "rank": 95
+  },
+  {
+    "symbol": "SBUX",
+    "name": "Starbucks",
+    "rank": 96
+  },
+  {
+    "symbol": "MMC",
+    "name": "Marsh & McLennan Companies",
+    "rank": 97
+  },
+  {
+    "symbol": "ICE",
+    "name": "Intercontinental Exchange",
+    "rank": 98
+  },
+  {
+    "symbol": "AMT",
+    "name": "American Tower",
+    "rank": 99
+  },
+  {
+    "symbol": "INTC",
+    "name": "Intel",
+    "rank": 100
+  },
+  {
+    "symbol": "DASH",
+    "name": "DoorDash",
+    "rank": 101
+  },
+  {
+    "symbol": "SO",
+    "name": "Southern Company",
+    "rank": 102
+  },
+  {
+    "symbol": "MO",
+    "name": "Altria Group",
+    "rank": 103
+  },
+  {
+    "symbol": "CME",
+    "name": "CME Group",
+    "rank": 104
+  },
+  {
+    "symbol": "WELL",
+    "name": "Welltower",
+    "rank": 105
+  },
+  {
+    "symbol": "PLD",
+    "name": "Prologis",
+    "rank": 106
+  },
+  {
+    "symbol": "CEG",
+    "name": "Constellation Energy",
+    "rank": 107
+  },
+  {
+    "symbol": "BMY",
+    "name": "Bristol-Myers Squibb",
+    "rank": 108
+  },
+  {
+    "symbol": "IBKR",
+    "name": "Interactive Brokers",
+    "rank": 109
+  },
+  {
+    "symbol": "FI",
+    "name": "Fiserv",
+    "rank": 110
+  },
+  {
+    "symbol": "HCA",
+    "name": "HCA Healthcare",
+    "rank": 111
+  },
+  {
+    "symbol": "WM",
+    "name": "Waste Management",
+    "rank": 112
+  },
+  {
+    "symbol": "MCK",
+    "name": "McKesson",
+    "rank": 113
+  },
+  {
+    "symbol": "DUK",
+    "name": "Duke Energy",
+    "rank": 114
+  },
+  {
+    "symbol": "COIN",
+    "name": "Coinbase",
+    "rank": 115
+  },
+  {
+    "symbol": "PH",
+    "name": "Parker-Hannifin",
+    "rank": 116
+  },
+  {
+    "symbol": "MCO",
+    "name": "Moody's",
+    "rank": 117
+  },
+  {
+    "symbol": "RCL",
+    "name": "Royal Caribbean Group",
+    "rank": 118
+  },
+  {
+    "symbol": "MDLZ",
+    "name": "Mondelez International",
+    "rank": 119
+  },
+  {
+    "symbol": "CDNS",
+    "name": "Cadence Design Systems",
+    "rank": 120
+  },
+  {
+    "symbol": "CTAS",
+    "name": "Cintas",
+    "rank": 121
+  },
+  {
+    "symbol": "SHW",
+    "name": "Sherwin-Williams",
+    "rank": 122
+  },
+  {
+    "symbol": "UPS",
+    "name": "United Parcel Service",
+    "rank": 123
+  },
+  {
+    "symbol": "TDG",
+    "name": "TransDigm Group",
+    "rank": 124
+  },
+  {
+    "symbol": "SNPS",
+    "name": "Synopsys",
+    "rank": 125
+  },
+  {
+    "symbol": "CVS",
+    "name": "CVS Health",
+    "rank": 126
+  },
+  {
+    "symbol": "ABNB",
+    "name": "Airbnb",
+    "rank": 127
+  },
+  {
+    "symbol": "DELL",
+    "name": "Dell",
+    "rank": 128
+  },
+  {
+    "symbol": "CI",
+    "name": "The Cigna Group",
+    "rank": 129
+  },
+  {
+    "symbol": "APO",
+    "name": "Apollo Global Management",
+    "rank": 130
+  },
+  {
+    "symbol": "SCCO",
+    "name": "Southern Copper",
+    "rank": 131
+  },
+  {
+    "symbol": "MMM",
+    "name": "3M",
+    "rank": 132
+  },
+  {
+    "symbol": "FTNT",
+    "name": "Fortinet",
+    "rank": 133
+  },
+  {
+    "symbol": "HOOD",
+    "name": "Robinhood",
+    "rank": 134
+  },
+  {
+    "symbol": "AJG",
+    "name": "Arthur J. Gallagher & Co.",
+    "rank": 135
+  },
+  {
+    "symbol": "GD",
+    "name": "General Dynamics",
+    "rank": 136
+  },
+  {
+    "symbol": "ELV",
+    "name": "Elevance Health",
+    "rank": 137
+  },
+  {
+    "symbol": "ORLY",
+    "name": "O'Reilly Automotive",
+    "rank": 138
+  },
+  {
+    "symbol": "PNC",
+    "name": "PNC Financial Services",
+    "rank": 139
+  },
+  {
+    "symbol": "EMR",
+    "name": "Emerson",
+    "rank": 140
+  },
+  {
+    "symbol": "MAR",
+    "name": "Marriott International",
+    "rank": 141
+  },
+  {
+    "symbol": "ECL",
+    "name": "Ecolab",
+    "rank": 142
+  },
+  {
+    "symbol": "ITW",
+    "name": "Illinois Tool Works",
+    "rank": 143
+  },
+  {
+    "symbol": "EQIX",
+    "name": "Equinix",
+    "rank": 144
+  },
+  {
+    "symbol": "RSG",
+    "name": "Republic Services",
+    "rank": 145
+  },
+  {
+    "symbol": "CMG",
+    "name": "Chipotle Mexican Grill",
+    "rank": 146
+  },
+  {
+    "symbol": "CL",
+    "name": "Colgate-Palmolive",
+    "rank": 147
+  },
+  {
+    "symbol": "SNOW",
+    "name": "Snowflake",
+    "rank": 148
+  },
+  {
+    "symbol": "USB",
+    "name": "U.S. Bancorp",
+    "rank": 149
+  },
+  {
+    "symbol": "PYPL",
+    "name": "PayPal",
+    "rank": 150
+  },
+  {
+    "symbol": "CRWV",
+    "name": "CoreWeave",
+    "rank": 151
+  },
+  {
+    "symbol": "NOC",
+    "name": "Northrop Grumman",
+    "rank": 152
+  },
+  {
+    "symbol": "HWM",
+    "name": "Howmet Aerospace",
+    "rank": 153
+  },
+  {
+    "symbol": "RBLX",
+    "name": "Roblox",
+    "rank": 154
+  },
+  {
+    "symbol": "WMB",
+    "name": "Williams Companies",
+    "rank": 155
+  },
+  {
+    "symbol": "ZTS",
+    "name": "Zoetis",
+    "rank": 156
+  },
+  {
+    "symbol": "MSI",
+    "name": "Motorola Solutions",
+    "rank": 157
+  },
+  {
+    "symbol": "EPD",
+    "name": "Enterprise Products",
+    "rank": 158
+  },
+  {
+    "symbol": "EOG",
+    "name": "EOG Resources",
+    "rank": 159
+  },
+  {
+    "symbol": "ADSK",
+    "name": "Autodesk",
+    "rank": 160
+  },
+  {
+    "symbol": "NET",
+    "name": "Cloudflare",
+    "rank": 161
+  },
+  {
+    "symbol": "FCX",
+    "name": "Freeport-McMoRan",
+    "rank": 162
+  },
+  {
+    "symbol": "BK",
+    "name": "BNY Mellon (Bank of New York Mellon)",
+    "rank": 163
+  },
+  {
+    "symbol": "APD",
+    "name": "Air Products and Chemicals",
+    "rank": 164
+  },
+  {
+    "symbol": "HLT",
+    "name": "Hilton Worldwide",
+    "rank": 165
+  },
+  {
+    "symbol": "VST",
+    "name": "Vistra",
+    "rank": 166
+  },
+  {
+    "symbol": "CARR",
+    "name": "Carrier Global",
+    "rank": 167
+  },
+  {
+    "symbol": "NEM",
+    "name": "Newmont",
+    "rank": 168
+  },
+  {
+    "symbol": "WDAY",
+    "name": "Workday",
+    "rank": 169
+  },
+  {
+    "symbol": "CSX",
+    "name": "CSX Corporation",
+    "rank": 170
+  },
+  {
+    "symbol": "AZO",
+    "name": "AutoZone",
+    "rank": 171
+  },
+  {
+    "symbol": "KMI",
+    "name": "Kinder Morgan",
+    "rank": 172
+  },
+  {
+    "symbol": "MRVL",
+    "name": "Marvell Technology",
+    "rank": 173
+  },
+  {
+    "symbol": "SPG",
+    "name": "Simon Property Group",
+    "rank": 174
+  },
+  {
+    "symbol": "AXON",
+    "name": "Axon Enterprise",
+    "rank": 175
+  },
+  {
+    "symbol": "ET",
+    "name": "Energy Transfer Partners",
+    "rank": 176
+  },
+  {
+    "symbol": "ROP",
+    "name": "Roper Technologies",
+    "rank": 177
+  },
+  {
+    "symbol": "MNST",
+    "name": "Monster Beverage",
+    "rank": 178
+  },
+  {
+    "symbol": "TFC",
+    "name": "Truist Financial",
+    "rank": 179
+  },
+  {
+    "symbol": "GBTC",
+    "name": "Grayscale Bitcoin Trust",
+    "rank": 180
+  },
+  {
+    "symbol": "REGN",
+    "name": "Regeneron Pharmaceuticals",
+    "rank": 181
+  },
+  {
+    "symbol": "NSC",
+    "name": "Norfolk Southern",
+    "rank": 182
+  },
+  {
+    "symbol": "DLR",
+    "name": "Digital Realty",
+    "rank": 183
+  },
+  {
+    "symbol": "TRV",
+    "name": "The Travelers Companies",
+    "rank": 184
+  },
+  {
+    "symbol": "COR",
+    "name": "Cencora",
+    "rank": 185
+  },
+  {
+    "symbol": "FDX",
+    "name": "FedEx",
+    "rank": 186
+  },
+  {
+    "symbol": "ARES",
+    "name": "Ares Management",
+    "rank": 187
+  },
+  {
+    "symbol": "CHTR",
+    "name": "Charter Communications",
+    "rank": 188
+  },
+  {
+    "symbol": "PWR",
+    "name": "Quanta Services",
+    "rank": 189
+  },
+  {
+    "symbol": "AFL",
+    "name": "Aflac",
+    "rank": 190
+  },
+  {
+    "symbol": "AEP",
+    "name": "American Electric Power",
+    "rank": 191
+  },
+  {
+    "symbol": "MPC",
+    "name": "Marathon Petroleum",
+    "rank": 192
+  },
+  {
+    "symbol": "CPNG",
+    "name": "Coupang",
+    "rank": 193
+  },
+  {
+    "symbol": "MET",
+    "name": "MetLife",
+    "rank": 194
+  },
+  {
+    "symbol": "PSX",
+    "name": "Phillips 66",
+    "rank": 195
+  },
+  {
+    "symbol": "LNG",
+    "name": "Cheniere Energy",
+    "rank": 196
+  },
+  {
+    "symbol": "PAYX",
+    "name": "Paychex",
+    "rank": 197
+  },
+  {
+    "symbol": "CTVA",
+    "name": "Corteva",
+    "rank": 198
+  },
+  {
+    "symbol": "MPLX",
+    "name": "MPLX",
+    "rank": 199
+  },
+  {
+    "symbol": "O",
+    "name": "Realty Income",
+    "rank": 200
+  },
+  {
+    "symbol": "PCAR",
+    "name": "Paccar",
+    "rank": 201
+  },
+  {
+    "symbol": "URI",
+    "name": "United Rentals",
+    "rank": 202
+  },
+  {
+    "symbol": "ALL",
+    "name": "Allstate",
+    "rank": 203
+  },
+  {
+    "symbol": "AMP",
+    "name": "Ameriprise Financial",
+    "rank": 204
+  },
+  {
+    "symbol": "PSA",
+    "name": "Public Storage",
+    "rank": 205
+  },
+  {
+    "symbol": "OKE",
+    "name": "Oneok",
+    "rank": 206
+  },
+  {
+    "symbol": "NDAQ",
+    "name": "Nasdaq",
+    "rank": 207
+  },
+  {
+    "symbol": "CRCL",
+    "name": "Circle Internet Group",
+    "rank": 208
+  },
+  {
+    "symbol": "DDOG",
+    "name": "Datadog",
+    "rank": 209
+  },
+  {
+    "symbol": "GM",
+    "name": "General Motors",
+    "rank": 210
+  },
+  {
+    "symbol": "BDX",
+    "name": "Becton Dickinson",
+    "rank": 211
+  },
+  {
+    "symbol": "GWW",
+    "name": "W. W. Grainger",
+    "rank": 212
+  },
+  {
+    "symbol": "SLB",
+    "name": "Schlumberger",
+    "rank": 213
+  },
+  {
+    "symbol": "FAST",
+    "name": "Fastenal",
+    "rank": 214
+  },
+  {
+    "symbol": "ZS",
+    "name": "Zscaler",
+    "rank": 215
+  },
+  {
+    "symbol": "SRE",
+    "name": "Sempra Energy",
+    "rank": 216
+  },
+  {
+    "symbol": "LHX",
+    "name": "L3Harris Technologies",
+    "rank": 217
+  },
+  {
+    "symbol": "D",
+    "name": "Dominion Energy",
+    "rank": 218
+  },
+  {
+    "symbol": "VRT",
+    "name": "Vertiv Holdings",
+    "rank": 219
+  },
+  {
+    "symbol": "AIG",
+    "name": "American International Group",
+    "rank": 220
+  },
+  {
+    "symbol": "CPRT",
+    "name": "Copart",
+    "rank": 221
+  },
+  {
+    "symbol": "WCN",
+    "name": "Waste Connections",
+    "rank": 222
+  },
+  {
+    "symbol": "VLO",
+    "name": "Valero Energy",
+    "rank": 223
+  },
+  {
+    "symbol": "HES",
+    "name": "Hess",
+    "rank": 224
+  },
+  {
+    "symbol": "F",
+    "name": "Ford",
+    "rank": 225
+  },
+  {
+    "symbol": "TGT",
+    "name": "Target",
+    "rank": 226
+  },
+  {
+    "symbol": "KDP",
+    "name": "Keurig Dr Pepper",
+    "rank": 227
+  },
+  {
+    "symbol": "KR",
+    "name": "Kroger",
+    "rank": 228
+  },
+  {
+    "symbol": "VEEV",
+    "name": "Veeva Systems",
+    "rank": 229
+  },
+  {
+    "symbol": "CMI",
+    "name": "Cummins",
+    "rank": 230
+  },
+  {
+    "symbol": "GLW",
+    "name": "Corning",
+    "rank": 231
+  },
+  {
+    "symbol": "OXY",
+    "name": "Occidental Petroleum",
+    "rank": 232
+  },
+  {
+    "symbol": "MSCI",
+    "name": "MSCI",
+    "rank": 233
+  },
+  {
+    "symbol": "EW",
+    "name": "Edwards Lifesciences",
+    "rank": 234
+  },
+  {
+    "symbol": "CCI",
+    "name": "Crown Castle",
+    "rank": 235
+  },
+  {
+    "symbol": "TTWO",
+    "name": "Take-Two Interactive",
+    "rank": 236
+  },
+  {
+    "symbol": "KMB",
+    "name": "Kimberly-Clark",
+    "rank": 237
+  },
+  {
+    "symbol": "EXC",
+    "name": "Exelon Corporation",
+    "rank": 238
+  },
+  {
+    "symbol": "IDXX",
+    "name": "IDEXX Laboratories",
+    "rank": 239
+  },
+  {
+    "symbol": "ROST",
+    "name": "Ross Stores",
+    "rank": 240
+  },
+  {
+    "symbol": "VRSK",
+    "name": "Verisk Analytics",
+    "rank": 241
+  },
+  {
+    "symbol": "FANG",
+    "name": "Diamondback Energy",
+    "rank": 242
+  },
+  {
+    "symbol": "FIS",
+    "name": "Fidelity National Information Services",
+    "rank": 243
+  },
+  {
+    "symbol": "AME",
+    "name": "Ametek",
+    "rank": 244
+  },
+  {
+    "symbol": "YUM",
+    "name": "Yum! Brands",
+    "rank": 245
+  },
+  {
+    "symbol": "XYZ",
+    "name": "Block",
+    "rank": 246
+  },
+  {
+    "symbol": "CBRE",
+    "name": "CBRE Group",
+    "rank": 247
+  },
+  {
+    "symbol": "FICO",
+    "name": "FICO",
+    "rank": 248
+  },
+  {
+    "symbol": "ALNY",
+    "name": "Alnylam Pharmaceuticals",
+    "rank": 249
+  },
+  {
+    "symbol": "PEG",
+    "name": "PSEG",
+    "rank": 250
+  },
+  {
+    "symbol": "CVNA",
+    "name": "Carvana",
+    "rank": 251
+  },
+  {
+    "symbol": "DHI",
+    "name": "D. R. Horton",
+    "rank": 252
+  },
+  {
+    "symbol": "MCHP",
+    "name": "Microchip Technology",
+    "rank": 253
+  },
+  {
+    "symbol": "CTSH",
+    "name": "Cognizant Technology Solutions",
+    "rank": 254
+  },
+  {
+    "symbol": "KVUE",
+    "name": "Kenvue",
+    "rank": 255
+  },
+  {
+    "symbol": "BKR",
+    "name": "Baker Hughes",
+    "rank": 256
+  },
+  {
+    "symbol": "OTIS",
+    "name": "Otis Worldwide",
+    "rank": 257
+  },
+  {
+    "symbol": "CAH",
+    "name": "Cardinal Health",
+    "rank": 258
+  },
+  {
+    "symbol": "CCL",
+    "name": "Carnival Corporation",
+    "rank": 259
+  },
+  {
+    "symbol": "XEL",
+    "name": "Xcel Energy",
+    "rank": 260
+  },
+  {
+    "symbol": "EA",
+    "name": "Electronic Arts",
+    "rank": 261
+  },
+  {
+    "symbol": "HEI",
+    "name": "HEICO",
+    "rank": 262
+  },
+  {
+    "symbol": "VG",
+    "name": "Venture Global",
+    "rank": 263
+  },
+  {
+    "symbol": "ROK",
+    "name": "Rockwell Automation",
+    "rank": 264
+  },
+  {
+    "symbol": "PRU",
+    "name": "Prudential Financial",
+    "rank": 265
+  },
+  {
+    "symbol": "TRGP",
+    "name": "Targa Resources",
+    "rank": 266
+  },
+  {
+    "symbol": "RMD",
+    "name": "ResMed",
+    "rank": 267
+  },
+  {
+    "symbol": "SYY",
+    "name": "Sysco",
+    "rank": 268
+  },
+  {
+    "symbol": "MPWR",
+    "name": "Monolithic Power Systems",
+    "rank": 269
+  },
+  {
+    "symbol": "TTD",
+    "name": "The Trade Desk",
+    "rank": 270
+  },
+  {
+    "symbol": "WAB",
+    "name": "Wabtec",
+    "rank": 271
+  },
+  {
+    "symbol": "ETR",
+    "name": "Entergy",
+    "rank": 272
+  },
+  {
+    "symbol": "ED",
+    "name": "Consolidated Edison",
+    "rank": 273
+  },
+  {
+    "symbol": "BRO",
+    "name": "Brown &amp; Brown",
+    "rank": 274
+  },
+  {
+    "symbol": "ODFL",
+    "name": "Old Dominion Freight Line",
+    "rank": 275
+  },
+  {
+    "symbol": "VMC",
+    "name": "Vulcan Materials",
+    "rank": 276
+  },
+  {
+    "symbol": "CSGP",
+    "name": "CoStar Group",
+    "rank": 277
+  },
+  {
+    "symbol": "VICI",
+    "name": "VICI Properties",
+    "rank": 278
+  },
+  {
+    "symbol": "HIG",
+    "name": "The Hartford",
+    "rank": 279
+  },
+  {
+    "symbol": "EBAY",
+    "name": "eBay",
+    "rank": 280
+  },
+  {
+    "symbol": "LVS",
+    "name": "Las Vegas Sands",
+    "rank": 281
+  },
+  {
+    "symbol": "GEHC",
+    "name": "GE HealthCare Technologies",
+    "rank": 282
+  },
+  {
+    "symbol": "HSY",
+    "name": "The Hershey Company",
+    "rank": 283
+  },
+  {
+    "symbol": "A",
+    "name": "Agilent Technologies",
+    "rank": 284
+  },
+  {
+    "symbol": "MLM",
+    "name": "Martin Marietta Materials",
+    "rank": 285
+  },
+  {
+    "symbol": "LYV",
+    "name": "Live Nation",
+    "rank": 286
+  },
+  {
+    "symbol": "EXR",
+    "name": "Extra Space Storage",
+    "rank": 287
+  },
+  {
+    "symbol": "WEC",
+    "name": "WEC Energy Group",
+    "rank": 288
+  },
+  {
+    "symbol": "DAL",
+    "name": "Delta Air Lines",
+    "rank": 289
+  },
+  {
+    "symbol": "DXCM",
+    "name": "DexCom",
+    "rank": 290
+  },
+  {
+    "symbol": "EQT",
+    "name": "EQT Corporation",
+    "rank": 291
+  },
+  {
+    "symbol": "EFX",
+    "name": "Equifax",
+    "rank": 292
+  },
+  {
+    "symbol": "ANSS",
+    "name": "Ansys",
+    "rank": 293
+  },
+  {
+    "symbol": "NUE",
+    "name": "Nucor",
+    "rank": 294
+  },
+  {
+    "symbol": "MTB",
+    "name": "M&T Bank",
+    "rank": 295
+  },
+  {
+    "symbol": "XYL",
+    "name": "Xylem",
+    "rank": 296
+  },
+  {
+    "symbol": "RJF",
+    "name": "Raymond James",
+    "rank": 297
+  },
+  {
+    "symbol": "KHC",
+    "name": "Kraft Heinz",
+    "rank": 298
+  },
+  {
+    "symbol": "DD",
+    "name": "Dupont De Nemours",
+    "rank": 299
+  },
+  {
+    "symbol": "STT",
+    "name": "State Street Corporation",
+    "rank": 300
+  },
+  {
+    "symbol": "EL",
+    "name": "Estee Lauder",
+    "rank": 301
+  },
+  {
+    "symbol": "IT",
+    "name": "Gartner",
+    "rank": 302
+  },
+  {
+    "symbol": "LPLA",
+    "name": "LPL Financial",
+    "rank": 303
+  },
+  {
+    "symbol": "TSCO",
+    "name": "Tractor Supply",
+    "rank": 304
+  },
+  {
+    "symbol": "STZ",
+    "name": "Constellation Brands",
+    "rank": 305
+  },
+  {
+    "symbol": "PCG",
+    "name": "Pacific Gas and Electric",
+    "rank": 306
+  },
+  {
+    "symbol": "OWL",
+    "name": "Blue Owl Capital",
+    "rank": 307
+  },
+  {
+    "symbol": "NRG",
+    "name": "NRG Energy",
+    "rank": 308
+  },
+  {
+    "symbol": "TW",
+    "name": "Tradeweb",
+    "rank": 309
+  },
+  {
+    "symbol": "HUBS",
+    "name": "HubSpot",
+    "rank": 310
+  },
+  {
+    "symbol": "IRM",
+    "name": "Iron Mountain",
+    "rank": 311
+  },
+  {
+    "symbol": "SMCI",
+    "name": "Supermicro",
+    "rank": 312
+  },
+  {
+    "symbol": "FITB",
+    "name": "Fifth Third Bank",
+    "rank": 313
+  },
+  {
+    "symbol": "AVB",
+    "name": "AvalonBay Communities",
+    "rank": 314
+  },
+  {
+    "symbol": "HUM",
+    "name": "Humana",
+    "rank": 315
+  },
+  {
+    "symbol": "IQV",
+    "name": "IQVIA",
+    "rank": 316
+  },
+  {
+    "symbol": "LEN",
+    "name": "Lennar",
+    "rank": 317
+  },
+  {
+    "symbol": "VTR",
+    "name": "Ventas",
+    "rank": 318
+  },
+  {
+    "symbol": "WBD",
+    "name": "Warner Bros. Discovery",
+    "rank": 319
+  },
+  {
+    "symbol": "KEYS",
+    "name": "Keysight",
+    "rank": 320
+  },
+  {
+    "symbol": "GIS",
+    "name": "General Mills",
+    "rank": 321
+  },
+  {
+    "symbol": "BR",
+    "name": "Broadridge Financial Solutions",
+    "rank": 322
+  },
+  {
+    "symbol": "K",
+    "name": "Kellanova \n (Kellogg's)",
+    "rank": 323
+  },
+  {
+    "symbol": "AWK",
+    "name": "American Water",
+    "rank": 324
+  },
+  {
+    "symbol": "HPE",
+    "name": "Hewlett Packard Enterprise",
+    "rank": 325
+  },
+  {
+    "symbol": "RKT",
+    "name": "Rocket Companies",
+    "rank": 326
+  },
+  {
+    "symbol": "FCNCA",
+    "name": "First Citizens BancShares",
+    "rank": 327
+  },
+  {
+    "symbol": "DTE",
+    "name": "DTE Energy",
+    "rank": 328
+  },
+  {
+    "symbol": "SYM",
+    "name": "Symbotic",
+    "rank": 329
+  },
+  {
+    "symbol": "VRSN",
+    "name": "VeriSign",
+    "rank": 330
+  },
+  {
+    "symbol": "RDDT",
+    "name": "Reddit",
+    "rank": 331
+  },
+  {
+    "symbol": "ROL",
+    "name": "Rollins",
+    "rank": 332
+  },
+  {
+    "symbol": "IP",
+    "name": "International Paper",
+    "rank": 333
+  },
+  {
+    "symbol": "WRB",
+    "name": "W. R. Berkley",
+    "rank": 334
+  },
+  {
+    "symbol": "CQP",
+    "name": "Cheniere Energy\nPartners",
+    "rank": 335
+  },
+  {
+    "symbol": "PPG",
+    "name": "PPG Industries",
+    "rank": 336
+  },
+  {
+    "symbol": "UAL",
+    "name": "United Airlines Holdings",
+    "rank": 337
+  },
+  {
+    "symbol": "SYF",
+    "name": "Synchrony",
+    "rank": 338
+  },
+  {
+    "symbol": "ADM",
+    "name": "Archer Daniels Midland (ADM)",
+    "rank": 339
+  },
+  {
+    "symbol": "EQR",
+    "name": "Equity Residential",
+    "rank": 340
+  },
+  {
+    "symbol": "DOV",
+    "name": "Dover",
+    "rank": 341
+  },
+  {
+    "symbol": "AEE",
+    "name": "Ameren",
+    "rank": 342
+  },
+  {
+    "symbol": "DRI",
+    "name": "Darden Restaurants",
+    "rank": 343
+  },
+  {
+    "symbol": "HBAN",
+    "name": "Huntington Bancshares",
+    "rank": 344
+  },
+  {
+    "symbol": "VLTO",
+    "name": "Veralto",
+    "rank": 345
+  },
+  {
+    "symbol": "MKL",
+    "name": "Markel",
+    "rank": 346
+  },
+  {
+    "symbol": "EXE",
+    "name": "Expand Energy",
+    "rank": 347
+  },
+  {
+    "symbol": "TYL",
+    "name": "Tyler Technologies",
+    "rank": 348
+  },
+  {
+    "symbol": "GDDY",
+    "name": "GoDaddy",
+    "rank": 349
+  },
+  {
+    "symbol": "TOST",
+    "name": "Toast",
+    "rank": 350
+  },
+  {
+    "symbol": "SBAC",
+    "name": "SBA Communications",
+    "rank": 351
+  },
+  {
+    "symbol": "MTD",
+    "name": "Mettler-Toledo",
+    "rank": 352
+  },
+  {
+    "symbol": "FWONK",
+    "name": "Formula One Group",
+    "rank": 353
+  },
+  {
+    "symbol": "PPL",
+    "name": "PPL",
+    "rank": 354
+  },
+  {
+    "symbol": "DG",
+    "name": "Dollar General",
+    "rank": 355
+  },
+  {
+    "symbol": "UI",
+    "name": "Ubiquiti",
+    "rank": 356
+  },
+  {
+    "symbol": "NTRS",
+    "name": "Northern Trust",
+    "rank": 357
+  },
+  {
+    "symbol": "CBOE",
+    "name": "Cboe Global Markets",
+    "rank": 358
+  },
+  {
+    "symbol": "HPQ",
+    "name": "HP",
+    "rank": 359
+  },
+  {
+    "symbol": "EME",
+    "name": "Emcor",
+    "rank": 360
+  },
+  {
+    "symbol": "PINS",
+    "name": "Pinterest",
+    "rank": 361
+  },
+  {
+    "symbol": "CHD",
+    "name": "Church & Dwight",
+    "rank": 362
+  },
+  {
+    "symbol": "ATO",
+    "name": "Atmos Energy",
+    "rank": 363
+  },
+  {
+    "symbol": "TDY",
+    "name": "Teledyne Technologies",
+    "rank": 364
+  },
+  {
+    "symbol": "ON",
+    "name": "ON Semiconductor",
+    "rank": 365
+  },
+  {
+    "symbol": "TPL",
+    "name": "Texas Pacific Land Corporation",
+    "rank": 366
+  },
+  {
+    "symbol": "JBL",
+    "name": "Jabil",
+    "rank": 367
+  },
+  {
+    "symbol": "CDW",
+    "name": "CDW Corporation",
+    "rank": 368
+  },
+  {
+    "symbol": "ES",
+    "name": "Eversource Energy",
+    "rank": 369
+  },
+  {
+    "symbol": "FOX",
+    "name": "Fox Corporation",
+    "rank": 370
+  },
+  {
+    "symbol": "ZM",
+    "name": "Zoom",
+    "rank": 371
+  },
+  {
+    "symbol": "CPAY",
+    "name": "Corpay",
+    "rank": 372
+  },
+  {
+    "symbol": "CNP",
+    "name": "CenterPoint Energy",
+    "rank": 373
+  },
+  {
+    "symbol": "GFS",
+    "name": "GlobalFoundries",
+    "rank": 374
+  },
+  {
+    "symbol": "FE",
+    "name": "FirstEnergy",
+    "rank": 375
+  },
+  {
+    "symbol": "CINF",
+    "name": "Cincinnati Financial",
+    "rank": 376
+  },
+  {
+    "symbol": "EXPE",
+    "name": "Expedia Group",
+    "rank": 377
+  },
+  {
+    "symbol": "DVN",
+    "name": "Devon Energy",
+    "rank": 378
+  },
+  {
+    "symbol": "WDC",
+    "name": "Western Digital",
+    "rank": 379
+  },
+  {
+    "symbol": "RF",
+    "name": "Regions Financial",
+    "rank": 380
+  },
+  {
+    "symbol": "SOFI",
+    "name": "SoFi",
+    "rank": 381
+  },
+  {
+    "symbol": "HUBB",
+    "name": "Hubbell",
+    "rank": 382
+  },
+  {
+    "symbol": "NVR",
+    "name": "NVR",
+    "rank": 383
+  },
+  {
+    "symbol": "TROW",
+    "name": "T. Rowe Price",
+    "rank": 384
+  },
+  {
+    "symbol": "IOT",
+    "name": "Samsara",
+    "rank": 385
+  },
+  {
+    "symbol": "AFRM",
+    "name": "Affirm",
+    "rank": 386
+  },
+  {
+    "symbol": "PHM",
+    "name": "PulteGroup",
+    "rank": 387
+  },
+  {
+    "symbol": "DLTR",
+    "name": "Dollar Tree",
+    "rank": 388
+  },
+  {
+    "symbol": "ULTA",
+    "name": "ULTA Beauty",
+    "rank": 389
+  },
+  {
+    "symbol": "NTRA",
+    "name": "Natera",
+    "rank": 390
+  },
+  {
+    "symbol": "LH",
+    "name": "LabCorp",
+    "rank": 391
+  },
+  {
+    "symbol": "PTC",
+    "name": "PTC",
+    "rank": 392
+  },
+  {
+    "symbol": "NTAP",
+    "name": "NetApp",
+    "rank": 393
+  },
+  {
+    "symbol": "LII",
+    "name": "Lennox",
+    "rank": 394
+  },
+  {
+    "symbol": "DKNG",
+    "name": "DraftKings",
+    "rank": 395
+  },
+  {
+    "symbol": "PODD",
+    "name": "Insulet",
+    "rank": 396
+  },
+  {
+    "symbol": "LDOS",
+    "name": "Leidos",
+    "rank": 397
+  },
+  {
+    "symbol": "WSM",
+    "name": "Williams-Sonoma",
+    "rank": 398
+  },
+  {
+    "symbol": "CMS",
+    "name": "CMS Energy",
+    "rank": 399
+  },
+  {
+    "symbol": "WAT",
+    "name": "Waters Corporation",
+    "rank": 400
+  },
+  {
+    "symbol": "CFG",
+    "name": "Citizens Financial Group",
+    "rank": 401
+  },
+  {
+    "symbol": "DOW",
+    "name": "Dow",
+    "rank": 402
+  },
+  {
+    "symbol": "SSNC",
+    "name": "SS&C Technologies",
+    "rank": 403
+  },
+  {
+    "symbol": "LYB",
+    "name": "LyondellBasell",
+    "rank": 404
+  },
+  {
+    "symbol": "NTNX",
+    "name": "Nutanix",
+    "rank": 405
+  },
+  {
+    "symbol": "KEY",
+    "name": "KeyCorp (KeyBank)",
+    "rank": 406
+  },
+  {
+    "symbol": "STLD",
+    "name": "Steel Dynamics",
+    "rank": 407
+  },
+  {
+    "symbol": "CG",
+    "name": "Carlyle Group",
+    "rank": 408
+  },
+  {
+    "symbol": "TSN",
+    "name": "Tyson Foods",
+    "rank": 409
+  },
+  {
+    "symbol": "TPG",
+    "name": "TPG Capital",
+    "rank": 410
+  },
+  {
+    "symbol": "INVH",
+    "name": "Invitation Homes",
+    "rank": 411
+  },
+  {
+    "symbol": "ESS",
+    "name": "Essex Property Trust",
+    "rank": 412
+  },
+  {
+    "symbol": "BIIB",
+    "name": "Biogen",
+    "rank": 413
+  },
+  {
+    "symbol": "GPN",
+    "name": "Global Payments",
+    "rank": 414
+  },
+  {
+    "symbol": "MKC",
+    "name": "McCormick & Company",
+    "rank": 415
+  },
+  {
+    "symbol": "EIX",
+    "name": "Edison International",
+    "rank": 416
+  },
+  {
+    "symbol": "IFF",
+    "name": "International Flavors & Fragrances",
+    "rank": 417
+  },
+  {
+    "symbol": "GWRE",
+    "name": "Guidewire Software",
+    "rank": 418
+  },
+  {
+    "symbol": "LUV",
+    "name": "Southwest Airlines",
+    "rank": 419
+  },
+  {
+    "symbol": "CRBG",
+    "name": "Corebridge Financial",
+    "rank": 420
+  },
+  {
+    "symbol": "DGX",
+    "name": "Quest Diagnostics",
+    "rank": 421
+  },
+  {
+    "symbol": "L",
+    "name": "Loews Corporation",
+    "rank": 422
+  },
+  {
+    "symbol": "CTRA",
+    "name": "Coterra Energy",
+    "rank": 423
+  },
+  {
+    "symbol": "TPR",
+    "name": "Tapestry",
+    "rank": 424
+  },
+  {
+    "symbol": "HAL",
+    "name": "Halliburton",
+    "rank": 425
+  },
+  {
+    "symbol": "CASY",
+    "name": "Casey's General Stores",
+    "rank": 426
+  },
+  {
+    "symbol": "WY",
+    "name": "Weyerhaeuser",
+    "rank": 427
+  },
+  {
+    "symbol": "TRMB",
+    "name": "Trimble",
+    "rank": 428
+  },
+  {
+    "symbol": "PSTG",
+    "name": "Pure Storage",
+    "rank": 429
+  },
+  {
+    "symbol": "TWLO",
+    "name": "Twilio",
+    "rank": 430
+  },
+  {
+    "symbol": "FIX",
+    "name": "Comfort Systems USA",
+    "rank": 431
+  },
+  {
+    "symbol": "GEN",
+    "name": "Gen Digital",
+    "rank": 432
+  },
+  {
+    "symbol": "ZBH",
+    "name": "Zimmer Biomet",
+    "rank": 433
+  },
+  {
+    "symbol": "WSO",
+    "name": "Watsco",
+    "rank": 434
+  },
+  {
+    "symbol": "NI",
+    "name": "NiSource",
+    "rank": 435
+  },
+  {
+    "symbol": "PFG",
+    "name": "Principal",
+    "rank": 436
+  },
+  {
+    "symbol": "INSM",
+    "name": "Insmed",
+    "rank": 437
+  },
+  {
+    "symbol": "PKG",
+    "name": "Packaging Corporation of America",
+    "rank": 438
+  },
+  {
+    "symbol": "USFD",
+    "name": "US Foods",
+    "rank": 439
+  },
+  {
+    "symbol": "CW",
+    "name": "Curtiss-Wright",
+    "rank": 440
+  },
+  {
+    "symbol": "TRU",
+    "name": "TransUnion",
+    "rank": 441
+  },
+  {
+    "symbol": "MAA",
+    "name": "Mid-America Apartment Communities",
+    "rank": 442
+  },
+  {
+    "symbol": "FTV",
+    "name": "Fortive",
+    "rank": 443
+  },
+  {
+    "symbol": "RKLB",
+    "name": "Rocket Lab",
+    "rank": 444
+  },
+  {
+    "symbol": "ERIE",
+    "name": "Erie Indemnity",
+    "rank": 445
+  },
+  {
+    "symbol": "FSLR",
+    "name": "First Solar",
+    "rank": 446
+  },
+  {
+    "symbol": "DUOL",
+    "name": "Duolingo",
+    "rank": 447
+  },
+  {
+    "symbol": "GPC",
+    "name": "Genuine Parts Company",
+    "rank": 448
+  },
+  {
+    "symbol": "NWS",
+    "name": "News Corp",
+    "rank": 449
+  },
+  {
+    "symbol": "Z",
+    "name": "Zillow",
+    "rank": 450
+  },
+  {
+    "symbol": "FFIV",
+    "name": "F5",
+    "rank": 451
+  },
+  {
+    "symbol": "CSL",
+    "name": "Carlisle Companies",
+    "rank": 452
+  },
+  {
+    "symbol": "RYAN",
+    "name": "Ryan Specialty Group",
+    "rank": 453
+  },
+  {
+    "symbol": "RL",
+    "name": "Ralph Lauren",
+    "rank": 454
+  },
+  {
+    "symbol": "RS",
+    "name": "Reliance",
+    "rank": 455
+  },
+  {
+    "symbol": "HRL",
+    "name": "Hormel Foods",
+    "rank": 456
+  },
+  {
+    "symbol": "OKTA",
+    "name": "Okta",
+    "rank": 457
+  },
+  {
+    "symbol": "MDB",
+    "name": "MongoDB",
+    "rank": 458
+  },
+  {
+    "symbol": "BSY",
+    "name": "Bentley Systems",
+    "rank": 459
+  },
+  {
+    "symbol": "SUI",
+    "name": "Sun Communities",
+    "rank": 460
+  },
+  {
+    "symbol": "DT",
+    "name": "Dynatrace",
+    "rank": 461
+  },
+  {
+    "symbol": "RBRK",
+    "name": "Rubrik",
+    "rank": 462
+  },
+  {
+    "symbol": "FDS",
+    "name": "FactSet",
+    "rank": 463
+  },
+  {
+    "symbol": "EQH",
+    "name": "Equitable Holdings",
+    "rank": 464
+  },
+  {
+    "symbol": "DKS",
+    "name": "Dick's Sporting Goods",
+    "rank": 465
+  },
+  {
+    "symbol": "SNA",
+    "name": "Snap-on",
+    "rank": 466
+  },
+  {
+    "symbol": "CHWY",
+    "name": "Chewy",
+    "rank": 467
+  },
+  {
+    "symbol": "ZBRA",
+    "name": "Zebra Technologies",
+    "rank": 468
+  },
+  {
+    "symbol": "BALL",
+    "name": "Ball Corporation",
+    "rank": 469
+  },
+  {
+    "symbol": "CNC",
+    "name": "Centene",
+    "rank": 470
+  },
+  {
+    "symbol": "EXPD",
+    "name": "Expeditors",
+    "rank": 471
+  },
+  {
+    "symbol": "CRDO",
+    "name": "Credo Technology",
+    "rank": 472
+  },
+  {
+    "symbol": "THC",
+    "name": "Tenet Healthcare",
+    "rank": 473
+  },
+  {
+    "symbol": "J",
+    "name": "Jacobs Engineering",
+    "rank": 474
+  },
+  {
+    "symbol": "WST",
+    "name": "West Pharmaceutical",
+    "rank": 475
+  },
+  {
+    "symbol": "EVRG",
+    "name": "Evergy",
+    "rank": 476
+  },
+  {
+    "symbol": "DOCU",
+    "name": "DocuSign",
+    "rank": 477
+  },
+  {
+    "symbol": "BURL",
+    "name": "Burlington Stores",
+    "rank": 478
+  },
+  {
+    "symbol": "LNT",
+    "name": "Alliant Energy",
+    "rank": 479
+  },
+  {
+    "symbol": "CF",
+    "name": "CF Industries",
+    "rank": 480
+  },
+  {
+    "symbol": "DECK",
+    "name": "Deckers Brands",
+    "rank": 481
+  },
+  {
+    "symbol": "BAX",
+    "name": "Baxter",
+    "rank": 482
+  },
+  {
+    "symbol": "DPZ",
+    "name": "Domino's Pizza",
+    "rank": 483
+  },
+  {
+    "symbol": "RIVN",
+    "name": "Rivian",
+    "rank": 484
+  },
+  {
+    "symbol": "ILMN",
+    "name": "Illumina",
+    "rank": 485
+  },
+  {
+    "symbol": "XPO",
+    "name": "XPO Logistics",
+    "rank": 486
+  },
+  {
+    "symbol": "SNAP",
+    "name": "Snap",
+    "rank": 487
+  },
+  {
+    "symbol": "ARCC",
+    "name": "Ares Capital",
+    "rank": 488
+  },
+  {
+    "symbol": "SFM",
+    "name": "Sprouts Farmers Market",
+    "rank": 489
+  },
+  {
+    "symbol": "CLX",
+    "name": "Clorox",
+    "rank": 490
+  },
+  {
+    "symbol": "UDR",
+    "name": "UDR Apartments",
+    "rank": 491
+  },
+  {
+    "symbol": "ASTS",
+    "name": "AST SpaceMobile",
+    "rank": 492
+  },
+  {
+    "symbol": "WMG",
+    "name": "Warner Music Group",
+    "rank": 493
+  },
+  {
+    "symbol": "BBY",
+    "name": "Best Buy",
+    "rank": 494
+  },
+  {
+    "symbol": "ALAB",
+    "name": "Astera Labs",
+    "rank": 495
+  },
+  {
+    "symbol": "ACM",
+    "name": "AECOM",
+    "rank": 496
+  },
+  {
+    "symbol": "JBHT",
+    "name": "J. B. Hunt",
+    "rank": 497
+  },
+  {
+    "symbol": "BG",
+    "name": "Bunge",
+    "rank": 498
+  },
+  {
+    "symbol": "FNF",
+    "name": "Fidelity National Financial",
+    "rank": 499
+  },
+  {
+    "symbol": "WES",
+    "name": "Western Midstream",
+    "rank": 500
+  },
+  {
+    "symbol": "SGI",
+    "name": "Somnigroup International",
+    "rank": 501
+  },
+  {
+    "symbol": "AMH",
+    "name": "AMH (American Homes 4 Rent)",
+    "rank": 502
+  },
+  {
+    "symbol": "EWBC",
+    "name": "East West Bancorp",
+    "rank": 503
+  },
+  {
+    "symbol": "SN",
+    "name": "SharkNinja",
+    "rank": 504
+  },
+  {
+    "symbol": "WWD",
+    "name": "Woodward",
+    "rank": 505
+  },
+  {
+    "symbol": "TXT",
+    "name": "Textron",
+    "rank": 506
+  },
+  {
+    "symbol": "COO",
+    "name": "Cooper Companies",
+    "rank": 507
+  },
+  {
+    "symbol": "TER",
+    "name": "Teradyne",
+    "rank": 508
+  },
+  {
+    "symbol": "GGG",
+    "name": "Graco",
+    "rank": 509
+  },
+  {
+    "symbol": "OMC",
+    "name": "Omnicom Group",
+    "rank": 510
+  },
+  {
+    "symbol": "QXO",
+    "name": "QXO, Inc.",
+    "rank": 511
+  },
+  {
+    "symbol": "HOLX",
+    "name": "Hologic",
+    "rank": 512
+  },
+  {
+    "symbol": "RPM",
+    "name": "RPM International",
+    "rank": 513
+  },
+  {
+    "symbol": "ULS",
+    "name": "UL Solutions",
+    "rank": 514
+  },
+  {
+    "symbol": "KIM",
+    "name": "Kimco Realty",
+    "rank": 515
+  },
+  {
+    "symbol": "LBRDA",
+    "name": "Liberty Broadband",
+    "rank": 516
+  },
+  {
+    "symbol": "APG",
+    "name": "APi Group",
+    "rank": 517
+  },
+  {
+    "symbol": "AVY",
+    "name": "Avery Dennison",
+    "rank": 518
+  },
+  {
+    "symbol": "UNM",
+    "name": "Unum",
+    "rank": 519
+  },
+  {
+    "symbol": "BJ",
+    "name": "BJ's Wholesale Club",
+    "rank": 520
+  },
+  {
+    "symbol": "ALGN",
+    "name": "Align Technology",
+    "rank": 521
+  },
+  {
+    "symbol": "TKO",
+    "name": "TKO Group Holdings",
+    "rank": 522
+  },
+  {
+    "symbol": "BLDR",
+    "name": "Builders FirstSource",
+    "rank": 523
+  },
+  {
+    "symbol": "COHR",
+    "name": "Coherent Corp.",
+    "rank": 524
+  },
+  {
+    "symbol": "H",
+    "name": "Hyatt Hotels",
+    "rank": 525
+  },
+  {
+    "symbol": "MAS",
+    "name": "Masco",
+    "rank": 526
+  },
+  {
+    "symbol": "PFGC",
+    "name": "Performance Food Group",
+    "rank": 527
+  },
+  {
+    "symbol": "IEX",
+    "name": "IDEX",
+    "rank": 528
+  },
+  {
+    "symbol": "CRS",
+    "name": "Carpenter Technology",
+    "rank": 529
+  },
+  {
+    "symbol": "WPC",
+    "name": "W. P. Carey",
+    "rank": 530
+  },
+  {
+    "symbol": "BF-A",
+    "name": "Brown Forman",
+    "rank": 531
+  },
+  {
+    "symbol": "JNPR",
+    "name": "Juniper Networks",
+    "rank": 532
+  },
+  {
+    "symbol": "BAH",
+    "name": "Booz Allen Hamilton",
+    "rank": 533
+  },
+  {
+    "symbol": "ARE",
+    "name": "Alexandria Real Estate Equities",
+    "rank": 534
+  },
+  {
+    "symbol": "UTHR",
+    "name": "United Therapeutics",
+    "rank": 535
+  },
+  {
+    "symbol": "MTZ",
+    "name": "MasTec",
+    "rank": 536
+  },
+  {
+    "symbol": "ENTG",
+    "name": "Entegris",
+    "rank": 537
+  },
+  {
+    "symbol": "JKHY",
+    "name": "Jack Henry &amp; Associates",
+    "rank": 538
+  },
+  {
+    "symbol": "PAYC",
+    "name": "Paycom",
+    "rank": 539
+  },
+  {
+    "symbol": "INCY",
+    "name": "Incyte",
+    "rank": 540
+  },
+  {
+    "symbol": "RGA",
+    "name": "Reinsurance Group of America",
+    "rank": 541
+  },
+  {
+    "symbol": "PAA",
+    "name": "Plains All American Pipeline",
+    "rank": 542
+  },
+  {
+    "symbol": "GLPI",
+    "name": "Gaming and Leisure Properties",
+    "rank": 543
+  },
+  {
+    "symbol": "SOLV",
+    "name": "Solventum",
+    "rank": 544
+  },
+  {
+    "symbol": "ROKU",
+    "name": "Roku",
+    "rank": 545
+  },
+  {
+    "symbol": "HLI",
+    "name": "Houlihan Lokey",
+    "rank": 546
+  },
+  {
+    "symbol": "BEN",
+    "name": "Franklin Resources",
+    "rank": 547
+  },
+  {
+    "symbol": "MORN",
+    "name": "Morningstar",
+    "rank": 548
+  },
+  {
+    "symbol": "NBIX",
+    "name": "Neurocrine Biosciences",
+    "rank": 549
+  },
+  {
+    "symbol": "REG",
+    "name": "Regency Centers",
+    "rank": 550
+  },
+  {
+    "symbol": "CART",
+    "name": "Instacart (Maplebear Inc.)",
+    "rank": 551
+  },
+  {
+    "symbol": "LAMR",
+    "name": "Lamar Advertising",
+    "rank": 552
+  },
+  {
+    "symbol": "DOC",
+    "name": "Healthpeak Properties",
+    "rank": 553
+  },
+  {
+    "symbol": "TLN",
+    "name": "Talen Energy",
+    "rank": 554
+  },
+  {
+    "symbol": "MRNA",
+    "name": "Moderna",
+    "rank": 555
+  },
+  {
+    "symbol": "CCK",
+    "name": "Crown Holdings",
+    "rank": 556
+  },
+  {
+    "symbol": "BWXT",
+    "name": "BWX Technologies",
+    "rank": 557
+  },
+  {
+    "symbol": "MOH",
+    "name": "Molina Healthcare",
+    "rank": 558
+  },
+  {
+    "symbol": "NDSN",
+    "name": "Nordson",
+    "rank": 559
+  },
+  {
+    "symbol": "ACI",
+    "name": "Albertsons",
+    "rank": 560
+  },
+  {
+    "symbol": "TXRH",
+    "name": "Texas Roadhouse",
+    "rank": 561
+  },
+  {
+    "symbol": "CLH",
+    "name": "Clean Harbors",
+    "rank": 562
+  },
+  {
+    "symbol": "X",
+    "name": "U.S. Steel",
+    "rank": 563
+  },
+  {
+    "symbol": "ITT",
+    "name": "ITT",
+    "rank": 564
+  },
+  {
+    "symbol": "IONQ",
+    "name": "IonQ",
+    "rank": 565
+  },
+  {
+    "symbol": "ALLY",
+    "name": "Ally Financial",
+    "rank": 566
+  },
+  {
+    "symbol": "ATI",
+    "name": "Allegheny Technologies",
+    "rank": 567
+  },
+  {
+    "symbol": "ELS",
+    "name": "Equity LifeStyle Properties",
+    "rank": 568
+  },
+  {
+    "symbol": "DRS",
+    "name": "Leonardo DRS",
+    "rank": 569
+  },
+  {
+    "symbol": "MANH",
+    "name": "Manhattan Associates",
+    "rank": 570
+  },
+  {
+    "symbol": "OC",
+    "name": "Owens Corning",
+    "rank": 571
+  },
+  {
+    "symbol": "CNM",
+    "name": "Core &amp; Main",
+    "rank": 572
+  },
+  {
+    "symbol": "LECO",
+    "name": "Lincoln Electric",
+    "rank": 573
+  },
+  {
+    "symbol": "U",
+    "name": "Unity Software",
+    "rank": 574
+  },
+  {
+    "symbol": "CNA",
+    "name": "CNA Financial",
+    "rank": 575
+  },
+  {
+    "symbol": "SAIL",
+    "name": "SailPoint",
+    "rank": 576
+  },
+  {
+    "symbol": "CPT",
+    "name": "Camden Property Trust",
+    "rank": 577
+  },
+  {
+    "symbol": "JLL",
+    "name": "Jones Lang LaSalle",
+    "rank": 578
+  },
+  {
+    "symbol": "BXP",
+    "name": "BXP, Inc.",
+    "rank": 579
+  },
+  {
+    "symbol": "RBC",
+    "name": "RBC Bearings",
+    "rank": 580
+  },
+  {
+    "symbol": "EHC",
+    "name": "HealthSouth",
+    "rank": 581
+  },
+  {
+    "symbol": "PAG",
+    "name": "Penske Automotive Group",
+    "rank": 582
+  },
+  {
+    "symbol": "PSHZF",
+    "name": "Pershing Square Holdings",
+    "rank": 583
+  },
+  {
+    "symbol": "EXEL",
+    "name": "Exelixis",
+    "rank": 584
+  },
+  {
+    "symbol": "RVTY",
+    "name": "Revvity",
+    "rank": 585
+  },
+  {
+    "symbol": "MOS",
+    "name": "The Mosaic Company",
+    "rank": 586
+  },
+  {
+    "symbol": "NLY",
+    "name": "Annaly Capital Management",
+    "rank": 587
+  },
+  {
+    "symbol": "CELH",
+    "name": "Celsius Holdings",
+    "rank": 588
+  },
+  {
+    "symbol": "UHS",
+    "name": "Universal Health Services",
+    "rank": 589
+  },
+  {
+    "symbol": "SCI",
+    "name": "Service Corporation International",
+    "rank": 590
+  },
+  {
+    "symbol": "SWKS",
+    "name": "Skyworks Solutions",
+    "rank": 591
+  },
+  {
+    "symbol": "CHRW",
+    "name": "C. H. Robinson",
+    "rank": 592
+  },
+  {
+    "symbol": "AVAV",
+    "name": "AeroVironment",
+    "rank": 593
+  },
+  {
+    "symbol": "SNX",
+    "name": "TD Synnex",
+    "rank": 594
+  },
+  {
+    "symbol": "WYNN",
+    "name": "Wynn Resorts",
+    "rank": 595
+  },
+  {
+    "symbol": "DOCS",
+    "name": "Doximity",
+    "rank": 596
+  },
+  {
+    "symbol": "PR",
+    "name": "Permian Resources",
+    "rank": 597
+  },
+  {
+    "symbol": "SEIC",
+    "name": "SEI Investments",
+    "rank": 598
+  },
+  {
+    "symbol": "TOL",
+    "name": "Toll Brothers",
+    "rank": 599
+  },
+  {
+    "symbol": "AKAM",
+    "name": "Akamai",
+    "rank": 600
+  },
+  {
+    "symbol": "POOL",
+    "name": "POOLCORP",
+    "rank": 601
+  },
+  {
+    "symbol": "HST",
+    "name": "Host Hotels & Resorts",
+    "rank": 602
+  },
+  {
+    "symbol": "AR",
+    "name": "Antero Resources",
+    "rank": 603
+  },
+  {
+    "symbol": "PRMB",
+    "name": "Primo Brands",
+    "rank": 604
+  },
+  {
+    "symbol": "GTM",
+    "name": "ZoomInfo",
+    "rank": 605
+  },
+  {
+    "symbol": "KNSL",
+    "name": "Kinsale Capital Group",
+    "rank": 606
+  },
+  {
+    "symbol": "JEF",
+    "name": "Jefferies Financial Group",
+    "rank": 607
+  },
+  {
+    "symbol": "FTAI",
+    "name": "FTAI Aviation",
+    "rank": 608
+  },
+  {
+    "symbol": "ARMK",
+    "name": "Aramark",
+    "rank": 609
+  },
+  {
+    "symbol": "PROK",
+    "name": "ProKidney",
+    "rank": 610
+  },
+  {
+    "symbol": "FHN",
+    "name": "First Horizon National",
+    "rank": 611
+  },
+  {
+    "symbol": "BMRN",
+    "name": "BioMarin Pharmaceutical",
+    "rank": 612
+  },
+  {
+    "symbol": "CIEN",
+    "name": "Ciena",
+    "rank": 613
+  },
+  {
+    "symbol": "SWK",
+    "name": "Stanley Black &amp; Decker",
+    "rank": 614
+  },
+  {
+    "symbol": "UHAL",
+    "name": "U-Haul",
+    "rank": 615
+  },
+  {
+    "symbol": "SJM",
+    "name": "J.M. Smucker Company",
+    "rank": 616
+  },
+  {
+    "symbol": "SF",
+    "name": "Stifel",
+    "rank": 617
+  },
+  {
+    "symbol": "EVR",
+    "name": "Evercore",
+    "rank": 618
+  },
+  {
+    "symbol": "CR",
+    "name": "Crane Company",
+    "rank": 619
+  },
+  {
+    "symbol": "HIMS",
+    "name": "Hims &amp; Hers Health",
+    "rank": 620
+  },
+  {
+    "symbol": "LINE",
+    "name": "Lineage",
+    "rank": 621
+  },
+  {
+    "symbol": "VNOM",
+    "name": "Viper Energy",
+    "rank": 622
+  },
+  {
+    "symbol": "BROS",
+    "name": "Dutch Bros",
+    "rank": 623
+  },
+  {
+    "symbol": "VTRS",
+    "name": "Viatris",
+    "rank": 624
+  },
+  {
+    "symbol": "DVA",
+    "name": "DaVita",
+    "rank": 625
+  },
+  {
+    "symbol": "PPC",
+    "name": "Pilgrim's Pride",
+    "rank": 626
+  },
+  {
+    "symbol": "OHI",
+    "name": "Omega Healthcare Investors",
+    "rank": 627
+  },
+  {
+    "symbol": "PCOR",
+    "name": "Procore",
+    "rank": 628
+  },
+  {
+    "symbol": "CACI",
+    "name": "CACI",
+    "rank": 629
+  },
+  {
+    "symbol": "HAS",
+    "name": "Hasbro",
+    "rank": 630
+  },
+  {
+    "symbol": "PNW",
+    "name": "Pinnacle West Capital",
+    "rank": 631
+  },
+  {
+    "symbol": "OVV",
+    "name": "Ovintiv",
+    "rank": 632
+  },
+  {
+    "symbol": "WLK",
+    "name": "Westlake Chemical",
+    "rank": 633
+  },
+  {
+    "symbol": "FNMA",
+    "name": "Fannie Mae",
+    "rank": 634
+  },
+  {
+    "symbol": "ATR",
+    "name": "AptarGroup",
+    "rank": 635
+  },
+  {
+    "symbol": "RGLD",
+    "name": "Royal Gold",
+    "rank": 636
+  },
+  {
+    "symbol": "AFG",
+    "name": "American Financial Group",
+    "rank": 637
+  },
+  {
+    "symbol": "DTM",
+    "name": "DT Midstream",
+    "rank": 638
+  },
+  {
+    "symbol": "WTRG",
+    "name": "Essential Utilities",
+    "rank": 639
+  },
+  {
+    "symbol": "EPAM",
+    "name": "EPAM Systems",
+    "rank": 640
+  },
+  {
+    "symbol": "DOX",
+    "name": "Amdocs",
+    "rank": 641
+  },
+  {
+    "symbol": "KMX",
+    "name": "CarMax",
+    "rank": 642
+  },
+  {
+    "symbol": "PCTY",
+    "name": "Paylocity",
+    "rank": 643
+  },
+  {
+    "symbol": "MTSI",
+    "name": "MACOM",
+    "rank": 644
+  },
+  {
+    "symbol": "MGM",
+    "name": "MGM Resorts",
+    "rank": 645
+  },
+  {
+    "symbol": "BLD",
+    "name": "TopBuild",
+    "rank": 646
+  },
+  {
+    "symbol": "SARO",
+    "name": "StandardAero",
+    "rank": 647
+  },
+  {
+    "symbol": "GME",
+    "name": "GameStop",
+    "rank": 648
+  },
+  {
+    "symbol": "TEM",
+    "name": "Tempus AI",
+    "rank": 649
+  },
+  {
+    "symbol": "CAVA",
+    "name": "CAVA Group",
+    "rank": 650
+  },
+  {
+    "symbol": "KVYO",
+    "name": "Klaviyo",
+    "rank": 651
+  },
+  {
+    "symbol": "EXAS",
+    "name": "Exact Sciences",
+    "rank": 652
+  },
+  {
+    "symbol": "KD",
+    "name": "Kyndryl",
+    "rank": 653
+  },
+  {
+    "symbol": "GL",
+    "name": "Globe Life",
+    "rank": 654
+  },
+  {
+    "symbol": "TAP",
+    "name": "Molson Coors",
+    "rank": 655
+  },
+  {
+    "symbol": "WBA",
+    "name": "Walgreens Boots Alliance",
+    "rank": 656
+  },
+  {
+    "symbol": "LKQ",
+    "name": "LKQ Corporation",
+    "rank": 657
+  },
+  {
+    "symbol": "TTAN",
+    "name": "ServiceTitan",
+    "rank": 658
+  },
+  {
+    "symbol": "WBS",
+    "name": "Webster Financial",
+    "rank": 659
+  },
+  {
+    "symbol": "COKE",
+    "name": "Coca-Cola Consolidated",
+    "rank": 660
+  },
+  {
+    "symbol": "RRX",
+    "name": "Regal Rexnord",
+    "rank": 661
+  },
+  {
+    "symbol": "UWMC",
+    "name": "UWM Holdings",
+    "rank": 662
+  },
+  {
+    "symbol": "CAG",
+    "name": "Conagra Brands",
+    "rank": 663
+  },
+  {
+    "symbol": "SSB",
+    "name": "South State Corp",
+    "rank": 664
+  },
+  {
+    "symbol": "CUBE",
+    "name": "CubeSmart",
+    "rank": 665
+  },
+  {
+    "symbol": "HII",
+    "name": "Huntington Ingalls Industries",
+    "rank": 666
+  },
+  {
+    "symbol": "AOS",
+    "name": "A. O. Smith",
+    "rank": 667
+  },
+  {
+    "symbol": "NXT",
+    "name": "Nextracker",
+    "rank": 668
+  },
+  {
+    "symbol": "NCLH",
+    "name": "Norwegian Cruise Line",
+    "rank": 669
+  },
+  {
+    "symbol": "AIZ",
+    "name": "Assurant",
+    "rank": 670
+  },
+  {
+    "symbol": "AGNC",
+    "name": "AGNC Investment",
+    "rank": 671
+  },
+  {
+    "symbol": "PEN",
+    "name": "Penumbra",
+    "rank": 672
+  },
+  {
+    "symbol": "JOBY",
+    "name": "Joby Aviation",
+    "rank": 673
+  },
+  {
+    "symbol": "TTEK",
+    "name": "Tetra Tech",
+    "rank": 674
+  },
+  {
+    "symbol": "WCC",
+    "name": "WESCO International",
+    "rank": 675
+  },
+  {
+    "symbol": "SKX",
+    "name": "Skechers",
+    "rank": 676
+  },
+  {
+    "symbol": "AIT",
+    "name": "Applied Industrial Technologies",
+    "rank": 677
+  },
+  {
+    "symbol": "SATS",
+    "name": "EchoStar",
+    "rank": 678
+  },
+  {
+    "symbol": "SFD",
+    "name": "Smithfield Foods",
+    "rank": 679
+  },
+  {
+    "symbol": "IPG",
+    "name": "Interpublic Group",
+    "rank": 680
+  },
+  {
+    "symbol": "COOP",
+    "name": "Mr. Cooper Group",
+    "rank": 681
+  },
+  {
+    "symbol": "AVTR",
+    "name": "Avantor",
+    "rank": 682
+  },
+  {
+    "symbol": "WAL",
+    "name": "Western Alliance Bancorporation",
+    "rank": 683
+  },
+  {
+    "symbol": "AYI",
+    "name": "Acuity Brands",
+    "rank": 684
+  },
+  {
+    "symbol": "DAY",
+    "name": "Dayforce",
+    "rank": 685
+  },
+  {
+    "symbol": "EMN",
+    "name": "Eastman Chemical",
+    "rank": 686
+  },
+  {
+    "symbol": "ORI",
+    "name": "Old Republic International",
+    "rank": 687
+  },
+  {
+    "symbol": "MEDP",
+    "name": "Medpace",
+    "rank": 688
+  },
+  {
+    "symbol": "CPB",
+    "name": "Campbell's",
+    "rank": 689
+  },
+  {
+    "symbol": "HSIC",
+    "name": "Henry Schein",
+    "rank": 690
+  },
+  {
+    "symbol": "WMS",
+    "name": "Advanced Drainage Systems",
+    "rank": 691
+  },
+  {
+    "symbol": "PEGA",
+    "name": "Pegasystems",
+    "rank": 692
+  },
+  {
+    "symbol": "MLI",
+    "name": "Mueller Industries",
+    "rank": 693
+  },
+  {
+    "symbol": "AUR",
+    "name": "Aurora Innovation",
+    "rank": 694
+  },
+  {
+    "symbol": "NYT",
+    "name": "New York Times",
+    "rank": 695
+  },
+  {
+    "symbol": "RRC",
+    "name": "Range Resources",
+    "rank": 696
+  },
+  {
+    "symbol": "PNFP",
+    "name": "Pinnacle Financial Partners",
+    "rank": 697
+  },
+  {
+    "symbol": "FYBR",
+    "name": "Frontier Communications",
+    "rank": 698
+  },
+  {
+    "symbol": "WING",
+    "name": "Wingstop Restaurants",
+    "rank": 699
+  },
+  {
+    "symbol": "FOUR",
+    "name": "Shift4 Payments",
+    "rank": 700
+  },
+  {
+    "symbol": "ESTC",
+    "name": "Elastic NV",
+    "rank": 701
+  },
+  {
+    "symbol": "REXR",
+    "name": "Rexford Industrial",
+    "rank": 702
+  },
+  {
+    "symbol": "LAD",
+    "name": "Lithia Motors",
+    "rank": 703
+  },
+  {
+    "symbol": "PRI",
+    "name": "Primerica",
+    "rank": 704
+  },
+  {
+    "symbol": "PLNT",
+    "name": "Planet Fitness",
+    "rank": 705
+  },
+  {
+    "symbol": "PARA",
+    "name": "Paramount Global",
+    "rank": 706
+  },
+  {
+    "symbol": "HQY",
+    "name": "HealthEquity",
+    "rank": 707
+  },
+  {
+    "symbol": "WTFC",
+    "name": "Wintrust Financial",
+    "rank": 708
+  },
+  {
+    "symbol": "EGP",
+    "name": "EastGroup Properties",
+    "rank": 709
+  },
+  {
+    "symbol": "FND",
+    "name": "Floor &amp; Decor",
+    "rank": 710
+  },
+  {
+    "symbol": "GNRC",
+    "name": "Generac Power Systems",
+    "rank": 711
+  },
+  {
+    "symbol": "MASI",
+    "name": "Masimo",
+    "rank": 712
+  },
+  {
+    "symbol": "INGR",
+    "name": "Ingredion",
+    "rank": 713
+  },
+  {
+    "symbol": "OGE",
+    "name": "OGE Energy",
+    "rank": 714
+  },
+  {
+    "symbol": "CFR",
+    "name": "Cullen/Frost Bankers",
+    "rank": 715
+  },
+  {
+    "symbol": "APPF",
+    "name": "AppFolio",
+    "rank": 716
+  },
+  {
+    "symbol": "CBSH",
+    "name": "Commerce Bancshares",
+    "rank": 717
+  },
+  {
+    "symbol": "CFLT",
+    "name": "Confluent",
+    "rank": 718
+  },
+  {
+    "symbol": "WTS",
+    "name": "Watts Water Technologies",
+    "rank": 719
+  },
+  {
+    "symbol": "ONB",
+    "name": "Old National Bank",
+    "rank": 720
+  },
+  {
+    "symbol": "AM",
+    "name": "Antero Midstream",
+    "rank": 721
+  },
+  {
+    "symbol": "GAP",
+    "name": "Gap Inc.",
+    "rank": 722
+  },
+  {
+    "symbol": "DINO",
+    "name": "HF Sinclair",
+    "rank": 723
+  },
+  {
+    "symbol": "LNW",
+    "name": "Light &amp; Wonder",
+    "rank": 724
+  },
+  {
+    "symbol": "FLR",
+    "name": "Fluor Corporation",
+    "rank": 725
+  },
+  {
+    "symbol": "ENSG",
+    "name": "The Ensign Group",
+    "rank": 726
+  },
+  {
+    "symbol": "UMBF",
+    "name": "UMB Financial",
+    "rank": 727
+  },
+  {
+    "symbol": "BPMC",
+    "name": "Blueprint Medicines",
+    "rank": 728
+  },
+  {
+    "symbol": "CMA",
+    "name": "Comerica",
+    "rank": 729
+  },
+  {
+    "symbol": "ALB",
+    "name": "Albemarle",
+    "rank": 730
+  },
+  {
+    "symbol": "SIRI",
+    "name": "Sirius XM",
+    "rank": 731
+  },
+  {
+    "symbol": "TECH",
+    "name": "Bio-Techne",
+    "rank": 732
+  },
+  {
+    "symbol": "DCI",
+    "name": "Donaldson Company",
+    "rank": 733
+  },
+  {
+    "symbol": "BBIO",
+    "name": "BridgeBio Pharma",
+    "rank": 734
+  },
+  {
+    "symbol": "ZION",
+    "name": "Zions Bancorporation",
+    "rank": 735
+  },
+  {
+    "symbol": "AGCO",
+    "name": "AGCO",
+    "rank": 736
+  },
+  {
+    "symbol": "FRT",
+    "name": "Federal Realty Investment Trust",
+    "rank": 737
+  },
+  {
+    "symbol": "QRVO",
+    "name": "Qorvo",
+    "rank": 738
+  },
+  {
+    "symbol": "MUSA",
+    "name": "Murphy USA",
+    "rank": 739
+  },
+  {
+    "symbol": "MKTX",
+    "name": "MarketAxess",
+    "rank": 740
+  },
+  {
+    "symbol": "NNN",
+    "name": "NNN REIT",
+    "rank": 741
+  },
+  {
+    "symbol": "OSK",
+    "name": "Oshkosh Corporation",
+    "rank": 742
+  },
+  {
+    "symbol": "PSN",
+    "name": "Parsons",
+    "rank": 743
+  },
+  {
+    "symbol": "ALSN",
+    "name": "Allison Transmission",
+    "rank": 744
+  },
+  {
+    "symbol": "HESM",
+    "name": "Hess Midstream",
+    "rank": 745
+  },
+  {
+    "symbol": "SPXC",
+    "name": "SPX Corporation",
+    "rank": 746
+  },
+  {
+    "symbol": "MTCH",
+    "name": "Match Group",
+    "rank": 747
+  },
+  {
+    "symbol": "7LX.F",
+    "name": "Galaxy Digital Holdings",
+    "rank": 748
+  },
+  {
+    "symbol": "AN",
+    "name": "AutoNation",
+    "rank": 749
+  },
+  {
+    "symbol": "MIDD",
+    "name": "Middleby",
+    "rank": 750
+  },
+  {
+    "symbol": "AA",
+    "name": "Alcoa",
+    "rank": 751
+  },
+  {
+    "symbol": "OKLO",
+    "name": "Oklo",
+    "rank": 752
+  },
+  {
+    "symbol": "AES",
+    "name": "AES",
+    "rank": 753
+  },
+  {
+    "symbol": "HLNE",
+    "name": "Hamilton Lane",
+    "rank": 754
+  },
+  {
+    "symbol": "ADC",
+    "name": "Agree Realty",
+    "rank": 755
+  },
+  {
+    "symbol": "VNO",
+    "name": "Vornado Realty Trust",
+    "rank": 756
+  },
+  {
+    "symbol": "SAIA",
+    "name": "Saia",
+    "rank": 757
+  },
+  {
+    "symbol": "BPOP",
+    "name": "Banco Popular",
+    "rank": 758
+  },
+  {
+    "symbol": "AZEK",
+    "name": "The AZEK Company",
+    "rank": 759
+  },
+  {
+    "symbol": "BRX",
+    "name": "Brixmor Property Group",
+    "rank": 760
+  },
+  {
+    "symbol": "OLLI",
+    "name": "Ollie's Bargain Outlet",
+    "rank": 761
+  },
+  {
+    "symbol": "CRL",
+    "name": "Charles River Laboratories",
+    "rank": 762
+  },
+  {
+    "symbol": "BWA",
+    "name": "BorgWarner",
+    "rank": 763
+  },
+  {
+    "symbol": "LEVI",
+    "name": "Levi Strauss &amp; Co.",
+    "rank": 764
+  },
+  {
+    "symbol": "GTLB",
+    "name": "GitLab",
+    "rank": 765
+  },
+  {
+    "symbol": "CVLT",
+    "name": "Commvault",
+    "rank": 766
+  },
+  {
+    "symbol": "ESAB",
+    "name": "ESAB",
+    "rank": 767
+  },
+  {
+    "symbol": "GMED",
+    "name": "Globus Medical",
+    "rank": 768
+  },
+  {
+    "symbol": "AAL",
+    "name": "American Airlines",
+    "rank": 769
+  },
+  {
+    "symbol": "SNV",
+    "name": "Synovus",
+    "rank": 770
+  },
+  {
+    "symbol": "KNX",
+    "name": "Knight-Swift",
+    "rank": 771
+  },
+  {
+    "symbol": "EAT",
+    "name": "Brinker International",
+    "rank": 772
+  },
+  {
+    "symbol": "CHDN",
+    "name": "Churchill Downs",
+    "rank": 773
+  },
+  {
+    "symbol": "OLED",
+    "name": "Universal Display Corporation",
+    "rank": 774
+  },
+  {
+    "symbol": "UGI",
+    "name": "UGI Corporation",
+    "rank": 775
+  },
+  {
+    "symbol": "GTLS",
+    "name": "Chart Industries",
+    "rank": 776
+  },
+  {
+    "symbol": "NFG",
+    "name": "National Fuel Gas",
+    "rank": 777
+  },
+  {
+    "symbol": "DBX",
+    "name": "Dropbox",
+    "rank": 778
+  },
+  {
+    "symbol": "IVZ",
+    "name": "Invesco",
+    "rank": 779
+  },
+  {
+    "symbol": "KTOS",
+    "name": "Kratos Defense &amp; Security Solutions",
+    "rank": 780
+  },
+  {
+    "symbol": "HRB",
+    "name": "H&amp;R Block",
+    "rank": 781
+  },
+  {
+    "symbol": "APA",
+    "name": "APA Corporation",
+    "rank": 782
+  },
+  {
+    "symbol": "LW",
+    "name": "Lamb Weston",
+    "rank": 783
+  },
+  {
+    "symbol": "INFA",
+    "name": "Informatica",
+    "rank": 784
+  },
+  {
+    "symbol": "LSCC",
+    "name": "Lattice Semiconductor",
+    "rank": 785
+  },
+  {
+    "symbol": "LOAR",
+    "name": "Loar Holdings",
+    "rank": 786
+  },
+  {
+    "symbol": "OBDC",
+    "name": "Blue Owl Capital Corporation",
+    "rank": 787
+  },
+  {
+    "symbol": "EXLS",
+    "name": "EXL Service",
+    "rank": 788
+  },
+  {
+    "symbol": "TTC",
+    "name": "The Toro Company",
+    "rank": 789
+  },
+  {
+    "symbol": "ELAN",
+    "name": "Elanco",
+    "rank": 790
+  },
+  {
+    "symbol": "CAI",
+    "name": "Caris Life Sciences",
+    "rank": 791
+  },
+  {
+    "symbol": "BRBR",
+    "name": "BellRing Brands",
+    "rank": 792
+  },
+  {
+    "symbol": "DLB",
+    "name": "Dolby",
+    "rank": 793
+  },
+  {
+    "symbol": "AWI",
+    "name": "Armstrong World Industries",
+    "rank": 794
+  },
+  {
+    "symbol": "UPST",
+    "name": "Upstart",
+    "rank": 795
+  },
+  {
+    "symbol": "STWD",
+    "name": "Starwood Property Trust",
+    "rank": 796
+  },
+  {
+    "symbol": "CORT",
+    "name": "Corcept Therapeutics",
+    "rank": 797
+  },
+  {
+    "symbol": "RGEN",
+    "name": "Repligen",
+    "rank": 798
+  },
+  {
+    "symbol": "DY",
+    "name": "Dycom Industries",
+    "rank": 799
+  },
+  {
+    "symbol": "SUN",
+    "name": "Sunoco",
+    "rank": 800
+  },
+  {
+    "symbol": "LLYVA",
+    "name": "Liberty Live Group",
+    "rank": 801
+  },
+  {
+    "symbol": "STEP",
+    "name": "StepStone Group",
+    "rank": 802
+  },
+  {
+    "symbol": "CWST",
+    "name": "Casella Waste Systems",
+    "rank": 803
+  },
+  {
+    "symbol": "BBWI",
+    "name": "Bath &amp; Body Works",
+    "rank": 804
+  },
+  {
+    "symbol": "FIVE",
+    "name": "Five Below",
+    "rank": 805
+  },
+  {
+    "symbol": "SLM",
+    "name": "Sallie Mae",
+    "rank": 806
+  },
+  {
+    "symbol": "PB",
+    "name": "Prosperity Bancshares",
+    "rank": 807
+  },
+  {
+    "symbol": "PATH",
+    "name": "UiPath",
+    "rank": 808
+  },
+  {
+    "symbol": "W",
+    "name": "Wayfair",
+    "rank": 809
+  },
+  {
+    "symbol": "R",
+    "name": "Ryder",
+    "rank": 810
+  },
+  {
+    "symbol": "ADT",
+    "name": "ADT",
+    "rank": 811
+  },
+  {
+    "symbol": "EXP",
+    "name": "Eagle Materials",
+    "rank": 812
+  },
+  {
+    "symbol": "LCID",
+    "name": "Lucid Motors",
+    "rank": 813
+  },
+  {
+    "symbol": "MKSI",
+    "name": "MKS Instruments",
+    "rank": 814
+  },
+  {
+    "symbol": "BMI",
+    "name": "Badger Meter",
+    "rank": 815
+  },
+  {
+    "symbol": "OMF",
+    "name": "OneMain Financial",
+    "rank": 816
+  },
+  {
+    "symbol": "VOYA",
+    "name": "Voya Financial",
+    "rank": 817
+  },
+  {
+    "symbol": "RMBS",
+    "name": "Rambus",
+    "rank": 818
+  },
+  {
+    "symbol": "FLS",
+    "name": "Flowserve",
+    "rank": 819
+  },
+  {
+    "symbol": "STAG",
+    "name": "STAG Industrial",
+    "rank": 820
+  },
+  {
+    "symbol": "NEU",
+    "name": "NewMarket Corp",
+    "rank": 821
+  },
+  {
+    "symbol": "LYFT",
+    "name": "Lyft",
+    "rank": 822
+  },
+  {
+    "symbol": "DDS",
+    "name": "Dillard's",
+    "rank": 823
+  },
+  {
+    "symbol": "STRL",
+    "name": "Sterling Infrastructure",
+    "rank": 824
+  },
+  {
+    "symbol": "LEGN",
+    "name": "Legend Biotech",
+    "rank": 825
+  },
+  {
+    "symbol": "HALO",
+    "name": "Halozyme Therapeutics",
+    "rank": 826
+  },
+  {
+    "symbol": "VMI",
+    "name": "Valmont Industries",
+    "rank": 827
+  },
+  {
+    "symbol": "MSA",
+    "name": "MSA Safety",
+    "rank": 828
+  },
+  {
+    "symbol": "ARW",
+    "name": "Arrow Electronics",
+    "rank": 829
+  },
+  {
+    "symbol": "PJT",
+    "name": "PJT Partners",
+    "rank": 830
+  },
+  {
+    "symbol": "MHK",
+    "name": "Mohawk Industries",
+    "rank": 831
+  },
+  {
+    "symbol": "SSD",
+    "name": "Simpson Manufacturing Company",
+    "rank": 832
+  },
+  {
+    "symbol": "CHE",
+    "name": "Chemed",
+    "rank": 833
+  },
+  {
+    "symbol": "RVMD",
+    "name": "Revolution Medicines",
+    "rank": 834
+  },
+  {
+    "symbol": "CRK",
+    "name": "Comstock Resources",
+    "rank": 835
+  },
+  {
+    "symbol": "FSS",
+    "name": "Federal Signal",
+    "rank": 836
+  },
+  {
+    "symbol": "BIO",
+    "name": "Bio-Rad Laboratories",
+    "rank": 837
+  },
+  {
+    "symbol": "BFAM",
+    "name": "Bright Horizons",
+    "rank": 838
+  },
+  {
+    "symbol": "ALGM",
+    "name": "Allegro MicroSystems",
+    "rank": 839
+  },
+  {
+    "symbol": "AXTA",
+    "name": "Axalta",
+    "rank": 840
+  },
+  {
+    "symbol": "BOKF",
+    "name": "BOK Financial",
+    "rank": 841
+  },
+  {
+    "symbol": "GPK",
+    "name": "Graphic Packaging",
+    "rank": 842
+  },
+  {
+    "symbol": "FR",
+    "name": "First Industrial Realty Trust",
+    "rank": 843
+  },
+  {
+    "symbol": "BYD",
+    "name": "Boyd Gaming",
+    "rank": 844
+  },
+  {
+    "symbol": "CE",
+    "name": "Celanese",
+    "rank": 845
+  },
+  {
+    "symbol": "VIRT",
+    "name": "Virtu Financial",
+    "rank": 846
+  },
+  {
+    "symbol": "ELF",
+    "name": "e.l.f. Beauty",
+    "rank": 847
+  },
+  {
+    "symbol": "WAY",
+    "name": "Waystar",
+    "rank": 848
+  },
+  {
+    "symbol": "IONS",
+    "name": "Ionis Pharmaceuticals",
+    "rank": 849
+  },
+  {
+    "symbol": "KEX",
+    "name": "Kirby Corporation",
+    "rank": 850
+  },
+  {
+    "symbol": "RLI",
+    "name": "RLI Corp.",
+    "rank": 851
+  },
+  {
+    "symbol": "MTDR",
+    "name": "Matador Resources",
+    "rank": 852
+  },
+  {
+    "symbol": "WH",
+    "name": "Wyndham Hotels &amp; Resorts",
+    "rank": 853
+  },
+  {
+    "symbol": "AL",
+    "name": "Air Lease Corporation",
+    "rank": 854
+  },
+  {
+    "symbol": "JBTM",
+    "name": "JBT Marel Corporation",
+    "rank": 855
+  },
+  {
+    "symbol": "MAT",
+    "name": "Mattel",
+    "rank": 856
+  },
+  {
+    "symbol": "MTG",
+    "name": "MGIC Investment",
+    "rank": 857
+  },
+  {
+    "symbol": "CADE",
+    "name": "Cadence Bancorp",
+    "rank": 858
+  },
+  {
+    "symbol": "RHP",
+    "name": "Ryman Hospitality Properties",
+    "rank": 859
+  },
+  {
+    "symbol": "LTH",
+    "name": "Life Time Group",
+    "rank": 860
+  },
+  {
+    "symbol": "BRKR",
+    "name": "Bruker",
+    "rank": 861
+  },
+  {
+    "symbol": "CCCS",
+    "name": "CCC Intelligent Solutions",
+    "rank": 862
+  },
+  {
+    "symbol": "FBIN",
+    "name": "Fortune Brands Innovations",
+    "rank": 863
+  },
+  {
+    "symbol": "MDGL",
+    "name": "Madrigal Pharmaceuticals",
+    "rank": 864
+  },
+  {
+    "symbol": "JXN",
+    "name": "Jackson Financial",
+    "rank": 865
+  },
+  {
+    "symbol": "LITE",
+    "name": "Lumentum",
+    "rank": 866
+  },
+  {
+    "symbol": "URBN",
+    "name": "Urban Outfitters",
+    "rank": 867
+  },
+  {
+    "symbol": "CWAN",
+    "name": "Clearwater Analytics",
+    "rank": 868
+  },
+  {
+    "symbol": "UFPI",
+    "name": "Universal Forest Products",
+    "rank": 869
+  },
+  {
+    "symbol": "GH",
+    "name": "Guardant Health",
+    "rank": 870
+  },
+  {
+    "symbol": "ZWS",
+    "name": "Zurn Water Solutions",
+    "rank": 871
+  },
+  {
+    "symbol": "TREX",
+    "name": "Trex",
+    "rank": 872
+  },
+  {
+    "symbol": "CAR",
+    "name": "Avis Budget Group",
+    "rank": 873
+  },
+  {
+    "symbol": "TMHC",
+    "name": "Taylor Morrison",
+    "rank": 874
+  },
+  {
+    "symbol": "OS",
+    "name": "OneStream",
+    "rank": 875
+  },
+  {
+    "symbol": "CWEN",
+    "name": "Clearway Energy",
+    "rank": 876
+  },
+  {
+    "symbol": "LPX",
+    "name": "Louisiana-Pacific",
+    "rank": 877
+  },
+  {
+    "symbol": "IDA",
+    "name": "Idacorp",
+    "rank": 878
+  },
+  {
+    "symbol": "CHRD",
+    "name": "Chord Energy",
+    "rank": 879
+  },
+  {
+    "symbol": "CZR",
+    "name": "Caesars Entertainment",
+    "rank": 880
+  },
+  {
+    "symbol": "BULL",
+    "name": "Webull",
+    "rank": 881
+  },
+  {
+    "symbol": "EPRT",
+    "name": "Essential Properties Realty Trust",
+    "rank": 882
+  },
+  {
+    "symbol": "RITM",
+    "name": "Rithm Capital",
+    "rank": 883
+  },
+  {
+    "symbol": "FAF",
+    "name": "First American",
+    "rank": 884
+  },
+  {
+    "symbol": "GTES",
+    "name": "Gates Industrial Corp",
+    "rank": 885
+  },
+  {
+    "symbol": "MARA",
+    "name": "Marathon Digital Holdings",
+    "rank": 886
+  },
+  {
+    "symbol": "S",
+    "name": "SentinelOne",
+    "rank": 887
+  },
+  {
+    "symbol": "KBR",
+    "name": "KBR",
+    "rank": 888
+  },
+  {
+    "symbol": "AAON",
+    "name": "Aaon",
+    "rank": 889
+  },
+  {
+    "symbol": "MTN",
+    "name": "Vail Resorts",
+    "rank": 890
+  },
+  {
+    "symbol": "CHH",
+    "name": "Choice Hotels International",
+    "rank": 891
+  },
+  {
+    "symbol": "CACC",
+    "name": "Credit Acceptance",
+    "rank": 892
+  },
+  {
+    "symbol": "ITRI",
+    "name": "Itron",
+    "rank": 893
+  },
+  {
+    "symbol": "ALK",
+    "name": "Alaska Airlines",
+    "rank": 894
+  },
+  {
+    "symbol": "SLGN",
+    "name": "Silgan Holdings",
+    "rank": 895
+  },
+  {
+    "symbol": "WHR",
+    "name": "Whirlpool",
+    "rank": 896
+  },
+  {
+    "symbol": "CROX",
+    "name": "Crocs",
+    "rank": 897
+  },
+  {
+    "symbol": "LNC",
+    "name": "Lincoln National Corporation",
+    "rank": 898
+  },
+  {
+    "symbol": "DAR",
+    "name": "Darling Ingredients",
+    "rank": 899
+  },
+  {
+    "symbol": "BEPC",
+    "name": "Brookfield Renewable",
+    "rank": 900
+  }
+]
