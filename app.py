@@ -31,6 +31,7 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
         try:
             buy_price = data.loc[buy_date, 'Close']
             target_price = buy_price * (1 + target_increase_pct)
+            high_52w = data.loc[buy_date, '52W_High']
             idx = data.index.get_loc(buy_date)
 
             if idx >= len(data) - 1:
@@ -51,6 +52,7 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
                     'buy_date': buy_date.date(),
                     'buy_price': round(buy_price, 2),
                     'target_price': round(target_price, 2),
+                    'high_52w': round(high_52w, 2),
                     'achieve_date': achieve_date.date(),
                     'days_to_achieve': days_to_achieve,
                     'achieved': True
@@ -60,6 +62,7 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
                     'buy_date': buy_date.date(),
                     'buy_price': round(buy_price, 2),
                     'target_price': round(target_price, 2),
+                    'high_52w': round(high_52w, 2),
                     'achieve_date': None,
                     'days_to_achieve': None,
                     'achieved': False
@@ -69,10 +72,9 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
 
     df = pd.DataFrame(results)
     success = df[df['achieved']]
-
-    # ✅ 현재 종가 정보 추가
     current_close = round(data['Close'].iloc[-1], 2)
     current_date = data.index[-1].date()
+    current_high_52w = round(data['52W_High'].iloc[-1], 2)
 
     return {
         'result_table': df.to_dict(orient='records'),
@@ -81,23 +83,21 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
         'success_rate': round(len(success) / len(df) * 100, 2) if len(df) > 0 else 0,
         'avg_days': round(success['days_to_achieve'].mean(), 1) if not success.empty else None,
         'current_close': current_close,
-        'current_date': current_date
+        'current_date': current_date,
+        'current_high_52w': current_high_52w
     }
 
 @app.route('/search')
 def search():
     query = request.args.get('q', '').lower()
-    results = [
-        t for t in ticker_data
-        if query in t['symbol'].lower()
-    ]
-    return jsonify(results[:20])
+    results = [t for t in ticker_data if query in t['symbol'].lower()]
+    return jsonify(results[:10])
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     result = None
     form_data = {'ticker': '', 'drawdown': '', 'target': '', 'days': ''}
-    page = int(request.args.get('page', 1))  # 페이지 번호
+    page = int(request.args.get('page', 1))
 
     if request.method == 'POST':
         form_data['ticker'] = request.form.get('ticker', '')
@@ -116,15 +116,9 @@ def index():
             full_result['target'] = target * 100
             full_result['days'] = days
 
-            # ✅ 정렬: 최신순
-            full_result['result_table'] = sorted(
-                full_result['result_table'],
-                key=lambda x: x['buy_date'],
-                reverse=True
-            )
+            full_result['result_table'] = sorted(full_result['result_table'], key=lambda x: x['buy_date'], reverse=True)
 
-            # ✅ 페이지네이션
-            per_page = 12
+            per_page = 15
             total = len(full_result['result_table'])
             start = (page - 1) * per_page
             end = start + per_page

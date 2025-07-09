@@ -28,7 +28,16 @@
             z-index: 1000;
             width: 100%;
         }
+        .card {
+            border-radius: 12px;
+            transition: all 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
     </style>
+
 </head>
 <body>
     <div class="container">
@@ -63,40 +72,67 @@
                 <hr class="my-4">
                 <h4>📊 {{ result.ticker }} 분석 결과</h4>
 
-                <div class="row row-cols-1 row-cols-md-2 g-3 mt-3">
+                <div class="row row-cols-1 row-cols-md-3 g-3 mt-3">
                     <div class="col">
-                        <div class="border rounded p-3 bg-light">
-                            <strong>총 하락 시점:</strong> {{ result.total_cases }}회
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="fw-bold">총 하락 시점</div>
+                                <div>{{ result.total_cases }}회</div>
+                            </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="border rounded p-3 bg-light">
-                            <strong>{{ result.days }}일 내 {{ result.target }}% 상승 성공:</strong> {{ result.success_cases }}회
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="fw-bold">{{ result.days }}일 내 {{ result.target }}% 상승 성공</div>
+                                <div>{{ result.success_cases }}회</div>
+                            </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="border rounded p-3 bg-light">
-                            <strong>✅ 성공 확률:</strong> {{ result.success_rate }}%
+                        <div class="card h-100 shadow-sm bg-light">
+                            <div class="card-body text-center">
+                                <div class="fw-bold text-success">✅ 성공 확률</div>
+                                <div>{{ result.success_rate }}%</div>
+                            </div>
                         </div>
                     </div>
                     {% if result.avg_days %}
                     <div class="col">
-                        <div class="border rounded p-3 bg-light">
-                            <strong>📅 평균 달성일수:</strong> {{ result.avg_days }}일
+                        <div class="card h-100 shadow-sm bg-light">
+                            <div class="card-body text-center">
+                                <div class="fw-bold">📅 평균 달성일수</div>
+                                <div>{{ result.avg_days }}일</div>
+                            </div>
                         </div>
                     </div>
                     {% endif %}
                     <div class="col">
-                        <div class="border rounded p-3 bg-light">
-                            <strong>📅 현재 날짜:</strong> {{ result.current_date }}
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="fw-bold">📅 현재 날짜</div>
+                                <div>{{ result.current_date }}</div>
+                            </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="border rounded p-3 bg-light">
-                            <strong>💰 현재 종가:</strong> {{ result.current_close }}
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="fw-bold">💰 현재 종가</div>
+                                <div>{{ result.current_close }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="fw-bold">📈 현재 52주 전고점</div>
+                                <div>{{ result.current_high_52w }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="table-responsive mt-4">
                     <table class="table table-bordered table-striped">
                         <thead class="table-light">
@@ -104,6 +140,7 @@
                                 <th>매수일</th>
                                 <th>매수가</th>
                                 <th>목표가</th>
+                                <th>52주 고점</th>
                                 <th>달성일</th>
                                 <th>달성일수</th>
                                 <th>달성 여부</th>
@@ -115,6 +152,7 @@
                                 <td>{{ row.buy_date }}</td>
                                 <td>{{ row.buy_price }}</td>
                                 <td>{{ row.target_price }}</td>
+                                <td>{{ row.high_52w }}</td>
                                 <td>{{ row.achieve_date or '-' }}</td>
                                 <td>{{ row.days_to_achieve or '-' }}</td>
                                 <td>
@@ -169,7 +207,7 @@
         data.forEach(item => {
             const li = document.createElement('li');
             li.className = 'list-group-item list-group-item-action';
-            li.textContent = `${item.symbol} (${item.name} / ${item.rank}위)`;
+            li.textContent = `${item.symbol} (${item.name} - ${item.rank}위)`;
             li.addEventListener('click', () => {
                 input.value = item.symbol;
                 list.innerHTML = '';
