@@ -64,7 +64,7 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
                     'target_price': round(target_price, 2),
                     'high_52w': round(high_52w, 2),
                     'achieve_date': None,
-                    'days_to_achieve': None,
+                    'days_to_achieve': f"{(data.index[-1].date() - buy_date.date()).days} (진행중)",
                     'achieved': False
                 })
         except:
