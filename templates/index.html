@@ -40,6 +40,24 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">📈 분석기</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="nav nav-pills">
+            <li class="nav-item me-3">
+            <a class="nav-link {% if request.path == '/' %}active bg-primary text-white{% else %}text-dark{% endif %} fw-semibold px-4 py-2 rounded-pill" href="/">하락 후 상승 분석</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link {% if request.path == '/distribution' %}active bg-primary text-white{% else %}text-dark{% endif %} fw-semibold px-4 py-2 rounded-pill" href="/distribution">📉 연도별 하락 횟수</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
     <div class="container">
         <h2 class="text-center mb-4">📉 52주 고점 대비 하락 후 📈 상승 분석기</h2>
         <form method="POST" class="row g-3 position-relative">

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>📉 52주 고점 대비 하락 횟수 분석기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 60px;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        #autocomplete-list {
+            max-height: 200px;
+            overflow-y: auto;
+            position: absolute;
+            z-index: 1000;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">📈 분석기</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="nav nav-pills">
+            <li class="nav-item me-3">
+            <a class="nav-link {% if request.path == '/' %}active bg-primary text-white{% else %}text-dark{% endif %} fw-semibold px-4 py-2 rounded-pill" href="/">하락 후 상승 분석</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link {% if request.path == '/distribution' %}active bg-primary text-white{% else %}text-dark{% endif %} fw-semibold px-4 py-2 rounded-pill" href="/distribution">📉 연도별 하락 횟수</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+<div class="container">
+    <h2 class="text-center mb-4">📉 52주 고점 대비 하락률 조건 만족 횟수 (연도별)</h2>
+
+    <form method="POST" class="row g-3 justify-content-center mb-4 position-relative">
+        <div class="col-md-6 position-relative">
+            <label class="form-label">종목 티커 (예: AAPL)</label>
+            <input type="text" name="ticker" id="ticker-input" class="form-control" required value="{{ ticker }}" autocomplete="off">
+            <ul id="autocomplete-list" class="list-group"></ul>
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">분석하기</button>
+        </div>
+    </form>
+
+    {% if table %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>하락률 (%)</th>
+                    {% for year in years %}
+                    <th>{{ year }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for dd, counts in table.items() %}
+                <tr>
+                    <td>{{ dd }}%</td>
+                    {% for year in years %}
+                    <td>{{ counts.get(year, 0) }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% elif ticker %}
+    <div class="alert alert-warning text-center mt-4">📭 해당 종목에 대한 하락률 데이터가 없습니다.</div>
+    {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const input = document.getElementById('ticker-input');
+const list = document.getElementById('autocomplete-list');
+
+input.addEventListener('input', async function () {
+    const query = this.value.trim();
+    if (!query) {
+        list.innerHTML = '';
+        return;
+    }
+
+    const res = await fetch(`/search?q=${query}`);
+    const data = await res.json();
+
+    list.innerHTML = '';
+    data.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item list-group-item-action';
+        li.textContent = `${item.symbol} (${item.name} - ${item.rank}위)`;
+        li.addEventListener('click', () => {
+            input.value = item.symbol;
+            list.innerHTML = '';
+        });
+        list.appendChild(li);
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!input.contains(e.target)) list.innerHTML = '';
+});
+</script>
+</body>
+</html>

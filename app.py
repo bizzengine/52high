@@ -132,5 +132,40 @@ def index():
 
     return render_template('index.html', result=result, form_data=form_data)
 
+@app.route('/distribution', methods=['GET', 'POST'])
+def distribution():
+    table = {}
+    ticker = ""
+    drawdowns = list(range(10, 85, 5))  # 20% ~ 80%
+    years = list(range(2020, 2026))
+
+    if request.method == 'POST':
+        ticker = request.form.get('ticker', '').upper()
+        try:
+            data = yf.download(ticker, start='2020-01-01', end='2030-01-01', auto_adjust=False)
+            if isinstance(data.columns, pd.MultiIndex):
+                data.columns = data.columns.droplevel('Ticker')
+
+            data['52W_High'] = data['High'].rolling(window=252, min_periods=1).max()
+            data['Drawdown'] = (data['Close'] - data['52W_High']) / data['52W_High'] * 100
+            data['Prev_Drawdown'] = data['Drawdown'].shift(1)
+            data['Year'] = data.index.year
+
+            table = {dr: {y: 0 for y in years} for dr in drawdowns}
+
+            for dr in drawdowns:
+                # 최초 하락률 진입 시점만 추출
+                condition = (data['Drawdown'] <= -dr) & (data['Prev_Drawdown'] > -dr)
+                buy_points = data[condition]
+                counts = buy_points['Year'].value_counts()
+                for y in years:
+                    table[dr][y] = int(counts.get(y, 0))
+
+        except Exception as e:
+            print("분석 실패:", e)
+
+    return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
