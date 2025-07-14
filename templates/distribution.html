@@ -63,6 +63,13 @@
         </div>
     </form>
 
+    {% if current_close and current_high_52w %}
+<div class="alert alert-secondary text-center">
+    💰 <strong>현재 종가:</strong> {{ current_close }} 
+    (📉 {{ current_drawdown }}% 하락)
+</div>
+{% endif %}
+
     {% if table %}
     <div class="table-responsive">
         <table class="table table-bordered table-striped">

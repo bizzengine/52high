@@ -161,10 +161,15 @@ def distribution():
                 for y in years:
                     table[dr][y] = int(counts.get(y, 0))
 
+            current_close = round(data['Close'].iloc[-1], 2)
+            current_high_52w = round(data['52W_High'].iloc[-1], 2)
+            current_drawdown = round((current_close - current_high_52w) / current_high_52w * 100, 2)
+
         except Exception as e:
             print("분석 실패:", e)
 
-    return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years)
+    return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years, current_close=current_close,
+    current_high_52w=current_high_52w, current_drawdown=current_drawdown)
 
 
 if __name__ == '__main__':
