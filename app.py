@@ -3,8 +3,9 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import json
-from datetime import timedelta
+from datetime import timedelta, datetime
 import math
+import os
 
 app = Flask(__name__)
 
@@ -230,6 +231,43 @@ def distribution():
     return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years, current_close=current_close,
                           current_high_52w=current_high_52w, current_drawdown=current_drawdown)
 
+@app.route('/drawdown')
+def drawdown_cards():
+    levels = list(range(5, 85, 5))
+    # recent_ohlc.csv의 마지막 수정 시각
+    try:
+        mtime = os.path.getmtime('recent_ohlc.csv')
+        last_update = datetime.fromtimestamp(mtime).strftime('%Y-%m-%d %H:%M')
+    except Exception:
+        last_update = None
+    return render_template('drawdown_cards.html', levels=levels, last_update=last_update)
+
+@app.route('/drawdown/list')
+def drawdown_list():
+    level = int(request.args.get('level', 5))
+    df = pd.read_csv('recent_ohlc.csv')
+    df['today_drawdown'] = (df['today_close'] - df['today_52whigh']) / df['today_52whigh'] * 100
+    df['yesterday_drawdown'] = (df['yesterday_close'] - df['yesterday_52whigh']) / df['yesterday_52whigh'] * 100
+
+    # 오늘 돌파(처음 -N% 이하) 종목 필터
+    filtered = df[
+        (df['today_drawdown'] <= -level) &
+        (df['yesterday_drawdown'] > -level)
+    ].copy()
+    filtered['today_drawdown'] = filtered['today_drawdown'].round(2)
+
+    # --- 추가: 랭크 기준 정렬용 딕셔너리 (tickers.json에서 rank 추출)
+    with open('tickers.json', 'r', encoding='utf-8') as f:
+        ticker_data = json.load(f)
+    symbol2rank = {item['symbol']: item.get('rank', idx+1) for idx, item in enumerate(ticker_data)}
+
+    # rank 컬럼 추가
+    filtered['rank'] = filtered['symbol'].map(symbol2rank)
+    filtered = filtered.sort_values('rank')
+
+    # 리스트 딕셔너리화
+    stocks = filtered[['rank', 'symbol', 'name', 'today_52whigh', 'today_close', 'today_drawdown']].to_dict(orient='records')
+    return jsonify(stocks=stocks)
 
 if __name__ == '__main__':
     app.run(debug=True)
