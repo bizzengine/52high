@@ -6,6 +6,8 @@ import json
 from datetime import timedelta, datetime
 import math
 import os
+import pytz  # 반드시 추가!
+
 
 app = Flask(__name__)
 
@@ -231,13 +233,14 @@ def distribution():
     return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years, current_close=current_close,
                           current_high_52w=current_high_52w, current_drawdown=current_drawdown)
 
+
 @app.route('/drawdown')
 def drawdown_cards():
     levels = list(range(5, 85, 5))
-    # recent_ohlc.csv의 마지막 수정 시각
     try:
         mtime = os.path.getmtime('recent_ohlc.csv')
-        last_update = datetime.fromtimestamp(mtime).strftime('%Y-%m-%d %H:%M')
+        kst = pytz.timezone('Asia/Seoul')
+        last_update = datetime.fromtimestamp(mtime, tz=kst).strftime('%Y-%m-%d %H:%M')
     except Exception:
         last_update = None
     return render_template('drawdown_cards.html', levels=levels, last_update=last_update)
