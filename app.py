@@ -138,6 +138,9 @@ def distribution():
     ticker = ""
     drawdowns = list(range(10, 85, 5))  # 20% ~ 80%
     years = list(range(2020, 2026))
+    current_close = None
+    current_high_52w = None
+    current_drawdown = None
 
     if request.method == 'POST':
         ticker = request.form.get('ticker', '').upper()
@@ -154,7 +157,6 @@ def distribution():
             table = {dr: {y: 0 for y in years} for dr in drawdowns}
 
             for dr in drawdowns:
-                # 최초 하락률 진입 시점만 추출
                 condition = (data['Drawdown'] <= -dr) & (data['Prev_Drawdown'] > -dr)
                 buy_points = data[condition]
                 counts = buy_points['Year'].value_counts()
@@ -169,7 +171,7 @@ def distribution():
             print("분석 실패:", e)
 
     return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years, current_close=current_close,
-    current_high_52w=current_high_52w, current_drawdown=current_drawdown)
+                          current_high_52w=current_high_52w, current_drawdown=current_drawdown)
 
 
 if __name__ == '__main__':
