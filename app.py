@@ -8,10 +8,12 @@ import math
 
 app = Flask(__name__)
 
+# tickers.json 파일을 읽어옵니다. (순위 순으로 정렬되어 있다고 가정)
 with open('tickers.json', 'r', encoding='utf-8') as f:
     ticker_data = json.load(f)
 
 def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
+    # (기존 analyze_stock 함수 내용은 변경 없음)
     data = yf.download(ticker, start='2020-01-01', end='2030-07-01', auto_adjust=False)
 
     if isinstance(data.columns, pd.MultiIndex):
@@ -87,14 +89,25 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
         'current_high_52w': current_high_52w
     }
 
+
 @app.route('/search')
 def search():
     query = request.args.get('q', '').lower()
-    results = [t for t in ticker_data if query in t['symbol'].lower()]
-    return jsonify(results[:10])
+    
+    # --- ✨ 변경된 부분 시작 ---
+    if not query:
+        # 검색어가 없으면 상위 200개 종목 반환
+        results = ticker_data[:200]
+    else:
+        # 검색어가 있으면 해당 검색어로 필터링
+        results = [t for t in ticker_data if query in t['symbol'].lower() or query in t['name'].lower()]
+    # --- ✨ 변경된 부분 끝 ---
+        
+    return jsonify(results[:200]) # 결과는 최대 200개로 제한
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    # (기존 index 함수 내용은 변경 없음)
     result = None
     form_data = {'ticker': '', 'drawdown': '', 'target': '', 'days': ''}
     page = int(request.args.get('page', 1))
@@ -132,8 +145,10 @@ def index():
 
     return render_template('index.html', result=result, form_data=form_data)
 
+
 @app.route('/distribution', methods=['GET', 'POST'])
 def distribution():
+    # (기존 distribution 함수 내용은 변경 없음)
     table = {}
     ticker = ""
     drawdowns = list(range(10, 85, 5))  # 20% ~ 80%
