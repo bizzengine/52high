@@ -13,7 +13,6 @@ with open('tickers.json', 'r', encoding='utf-8') as f:
     ticker_data = json.load(f)
 
 def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
-    # (기존 analyze_stock 함수 내용은 변경 없음)
     data = yf.download(ticker, start='2020-01-01', end='2030-07-01', auto_adjust=False)
 
     if isinstance(data.columns, pd.MultiIndex):
@@ -40,15 +39,24 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
                 continue
 
             start_date = data.index[idx + 1]
-            end_date = start_date + timedelta(days=check_period_days)
-            if end_date > data.index[-1]:
-                end_date = data.index[-1]
+            
+            # 기간 내 확인 (영업일 기준)
+            available_dates = data.index[idx + 1:]  # 매수일 다음날부터
+            if len(available_dates) < check_period_days:
+                period_end_idx = len(available_dates) - 1
+            else:
+                period_end_idx = check_period_days - 1  # 0부터 시작하므로 -1
+            
+            if period_end_idx >= 0 and period_end_idx < len(available_dates):
+                period_end_date = available_dates[period_end_idx]
+                period_data = data.loc[start_date:period_end_date]
+            else:
+                period_data = data.loc[start_date:data.index[-1]]
+            period_hit = period_data[period_data['High'] >= target_price]
 
-            check_data = data.loc[start_date:end_date]
-            hit = check_data[check_data['High'] >= target_price]
-
-            if not hit.empty:
-                achieve_date = hit.index[0]
+            if not period_hit.empty:
+                # 기간 내 달성
+                achieve_date = period_hit.index[0]
                 days_to_achieve = len(data.loc[buy_date:achieve_date]) - 1
                 results.append({
                     'buy_date': buy_date.date(),
@@ -60,15 +68,50 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
                     'achieved': True
                 })
             else:
-                results.append({
-                    'buy_date': buy_date.date(),
-                    'buy_price': round(buy_price, 2),
-                    'target_price': round(target_price, 2),
-                    'high_52w': round(high_52w, 2),
-                    'achieve_date': None,
-                    'days_to_achieve': f"{(data.index[-1].date() - buy_date.date()).days} (진행중)",
-                    'achieved': False
-                })
+                # 기간 내 달성 실패 - 기간 이후 달성 여부 확인
+                if period_end_idx >= 0 and period_end_idx < len(available_dates) - 1:
+                    after_period_start = available_dates[period_end_idx + 1]
+                    after_period_data = data.loc[after_period_start:]
+                else:
+                    after_period_data = pd.DataFrame()  # 빈 DataFrame
+                if not after_period_data.empty:
+                    after_hit = after_period_data[after_period_data['High'] >= target_price]
+                    
+                    if not after_hit.empty:
+                        # 기간 초과 후 달성
+                        achieve_date = after_hit.index[0]
+                        days_to_achieve = len(data.loc[buy_date:achieve_date]) - 1
+                        results.append({
+                            'buy_date': buy_date.date(),
+                            'buy_price': round(buy_price, 2),
+                            'target_price': round(target_price, 2),
+                            'high_52w': round(high_52w, 2),
+                            'achieve_date': achieve_date.date(),
+                            'days_to_achieve': f"{days_to_achieve} (기간초과)",
+                            'achieved': False  # 기간 초과는 실패로 처리
+                        })
+                    else:
+                        # 전체 기간 동안 달성 실패
+                        results.append({
+                            'buy_date': buy_date.date(),
+                            'buy_price': round(buy_price, 2),
+                            'target_price': round(target_price, 2),
+                            'high_52w': round(high_52w, 2),
+                            'achieve_date': None,
+                            'days_to_achieve': f"{(data.index[-1].date() - buy_date.date()).days} (진행중)",
+                            'achieved': False
+                        })
+                else:
+                    # 데이터가 없는 경우
+                    results.append({
+                        'buy_date': buy_date.date(),
+                        'buy_price': round(buy_price, 2),
+                        'target_price': round(target_price, 2),
+                        'high_52w': round(high_52w, 2),
+                        'achieve_date': None,
+                        'days_to_achieve': f"{(data.index[-1].date() - buy_date.date()).days} (진행중)",
+                        'achieved': False
+                    })
         except:
             continue
 
@@ -88,7 +131,6 @@ def analyze_stock(ticker, drawdown_pct, target_increase_pct, check_period_days):
         'current_date': current_date,
         'current_high_52w': current_high_52w
     }
-
 
 @app.route('/search')
 def search():
