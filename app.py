@@ -206,6 +206,8 @@ def distribution():
         ticker = request.form.get('ticker', '').upper()
     elif request.method == 'GET' and 'ticker' in request.args:
         ticker = request.args.get('ticker', '').upper()
+
+    if ticker:
         try:
             data = yf.download(ticker, start='2020-01-01', end='2030-01-01', auto_adjust=False)
             if isinstance(data.columns, pd.MultiIndex):
