@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
         /* (다른 스타일은 변경 없음) */
         :root {
-            --primary-color: #007bff; /* 다른 파란색 계열로 변경 */
+            --primary-color: #007bff;
+            /* 다른 파란색 계열로 변경 */
             --light-primary-color: #e6f2ff;
             --secondary-color: #f6f8fa;
             --text-color: #333;
             --light-text-color: #666;
             --border-color: #dee2e6;
-            --card-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            --card-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
             --card-radius: 12px;
         }
 
@@ -31,7 +34,7 @@
 
         .navbar {
             background-color: white !important;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .navbar-brand {
@@ -47,11 +50,12 @@
             padding: 10px 20px !important;
         }
 
-        .nav-link.active, .nav-link:hover {
+        .nav-link.active,
+        .nav-link:hover {
             background-color: var(--light-primary-color);
             color: var(--primary-color);
         }
-        
+
         .main-container {
             max-width: 960px;
             margin-top: 40px;
@@ -64,7 +68,7 @@
             border-radius: 20px;
             box-shadow: var(--card-shadow);
         }
-        
+
         .form-control {
             border-radius: 8px;
             padding: 12px;
@@ -99,11 +103,14 @@
             border: none;
             max-height: 250px;
             overflow-y: auto;
-            z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 추가 */
+            z-index: 1000;
+            /* 다른 요소 위에 표시되도록 z-index 추가 */
         }
+
         /* --- ✨ 변경된 부분 끝 --- */
 
-        .list-group-item-action:focus, .list-group-item-action:hover {
+        .list-group-item-action:focus,
+        .list-group-item-action:hover {
             background-color: var(--light-primary-color);
             color: var(--primary-color);
         }
@@ -140,44 +147,69 @@
             color: #333;
             background-color: #f1f3f5;
         }
-        
-        .heatmap-table td.level-0 { background-color: #f8f9fa; color: #adb5bd;}
-        .heatmap-table td.level-1 { background-color: #cfe9ff; }
-        .heatmap-table td.level-2 { background-color: #9bcdff; }
-        .heatmap-table td.level-3 { background-color: #68b1ff; color: white; }
-        .heatmap-table td.level-4 { background-color: #3595ff; color: white; }
-        .heatmap-table td.level-5 { background-color: #007bff; color: white; }
+
+        .heatmap-table td.level-0 {
+            background-color: #f8f9fa;
+            color: #adb5bd;
+        }
+
+        .heatmap-table td.level-1 {
+            background-color: #cfe9ff;
+        }
+
+        .heatmap-table td.level-2 {
+            background-color: #9bcdff;
+        }
+
+        .heatmap-table td.level-3 {
+            background-color: #68b1ff;
+            color: white;
+        }
+
+        .heatmap-table td.level-4 {
+            background-color: #3595ff;
+            color: white;
+        }
+
+        .heatmap-table td.level-5 {
+            background-color: #007bff;
+            color: white;
+        }
 
         .heatmap-table td:hover {
             transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             z-index: 10;
             position: relative;
         }
     </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid main-container">
-        <a class="navbar-brand" href="/">📈 Stock Analyzer</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">하락 후 상승 분석</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/distribution' %}active{% endif %}" href="/distribution">연도별 하락 횟수</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/drawdown' %}active{% endif %}" href="/drawdown">하락 돌파 종목</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid main-container">
+            <a class="navbar-brand" href="/">📈 Stock Analyzer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">하락 후 상승 분석</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/distribution' %}active{% endif %}"
+                            href="/distribution">연도별 하락 횟수</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/drawdown' %}active{% endif %}" href="/drawdown">하락 돌파
+                            종목</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav> <div class="container main-container">
+    </nav>
+    <div class="container main-container">
         <div class="analyzer-card">
             <h2 class="text-center mb-1">📉 연도별 하락 빈도 분석</h2>
             <p class="text-center text-secondary mb-5">특정 하락률에 도달한 횟수를 연도별 히트맵으로 확인합니다.</p>
@@ -185,7 +217,8 @@
             <form method="POST" class="row g-3 justify-content-center mb-4 position-relative">
                 <div class="col-md-8 position-relative">
                     <label class="form-label visually-hidden">종목 티커</label>
-                    <input type="text" name="ticker" id="ticker-input" class="form-control" required placeholder="분석할 종목 티커를 입력하세요 (예: TSLA)" value="{{ ticker }}" autocomplete="off">
+                    <input type="text" name="ticker" id="ticker-input" class="form-control" required
+                        placeholder="분석할 종목 티커를 입력하세요 (예: TSLA)" value="{{ ticker }}" autocomplete="off">
                     <ul id="autocomplete-list" class="list-group position-absolute w-100 mt-1"></ul>
                 </div>
                 <div class="col-md-4">
@@ -197,7 +230,8 @@
 
             {% if current_close and current_high_52w %}
             <div class="alert current-status text-center mt-4">
-                <strong>{{ ticker }} 현재 상태:</strong> 종가 {{ current_close }} (52주 고점 대비 <strong>{{ current_drawdown }}%</strong>)
+                <strong>{{ ticker }} 현재 상태:</strong> 종가 {{ current_close }} (52주 고점 대비 <strong>{{ current_drawdown
+                    }}%</strong>)
             </div>
             {% endif %}
 
@@ -217,14 +251,14 @@
                         <tr>
                             <td><strong>-{{ dd }}%</strong></td>
                             {% for year in years %}
-                                {% set count = counts.get(year, 0) %}
-                                {% set level = 0 %}
-                                {% if count > 0 %}{% set level = 1 %}{% endif %}
-                                {% if count > 2 %}{% set level = 2 %}{% endif %}
-                                {% if count > 4 %}{% set level = 3 %}{% endif %}
-                                {% if count > 6 %}{% set level = 4 %}{% endif %}
-                                {% if count > 8 %}{% set level = 5 %}{% endif %}
-                                <td class="level-{{ level }}" title="{{count}}회">{{ count }}</td>
+                            {% set count = counts.get(year, 0) %}
+                            {% set level = 0 %}
+                            {% if count > 0 %}{% set level = 1 %}{% endif %}
+                            {% if count > 2 %}{% set level = 2 %}{% endif %}
+                            {% if count > 4 %}{% set level = 3 %}{% endif %}
+                            {% if count > 6 %}{% set level = 4 %}{% endif %}
+                            {% if count > 8 %}{% set level = 5 %}{% endif %}
+                            <td class="level-{{ level }}" title="{{count}}회">{{ count }}</td>
                             {% endfor %}
                         </tr>
                         {% endfor %}
@@ -282,5 +316,6 @@
             }
         });
     </script>
-    </body>
+</body>
+
 </html>

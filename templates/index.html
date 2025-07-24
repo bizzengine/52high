@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
         :root {
@@ -20,7 +22,7 @@
             --border-color: #e9ecef;
             --success-color: #28a745;
             --danger-color: #dc3545;
-            --card-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            --card-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
             --card-radius: 12px;
         }
 
@@ -32,7 +34,7 @@
 
         .navbar {
             background-color: white !important;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .navbar-brand {
@@ -48,7 +50,8 @@
             padding: 10px 20px !important;
         }
 
-        .nav-link.active, .nav-link:hover {
+        .nav-link.active,
+        .nav-link:hover {
             background-color: var(--light-primary-color);
             color: var(--primary-color);
         }
@@ -106,7 +109,9 @@
             overflow-y: auto;
             z-index: 1000;
         }
-        .list-group-item-action:focus, .list-group-item-action:hover {
+
+        .list-group-item-action:focus,
+        .list-group-item-action:hover {
             background-color: var(--light-primary-color);
             color: var(--primary-color);
         }
@@ -119,36 +124,47 @@
         .stat-card {
             background-color: #fff;
             border-radius: var(--card-radius);
-            padding: 15px; /* 내부 여백 축소 */
+            padding: 15px;
+            /* 내부 여백 축소 */
             text-align: center;
             box-shadow: var(--card-shadow);
             transition: all 0.3s ease;
         }
+
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
+
         .stat-card .stat-icon {
-            font-size: 20px; /* 아이콘 크기 축소 */
+            font-size: 20px;
+            /* 아이콘 크기 축소 */
             margin-bottom: 8px;
             color: var(--primary-color);
         }
+
         .stat-card .stat-title {
-            font-size: 13px; /* 제목 폰트 크기 축소 */
+            font-size: 13px;
+            /* 제목 폰트 크기 축소 */
             font-weight: 500;
             color: var(--light-text-color);
         }
+
         .stat-card .stat-value {
-            font-size: 20px; /* 값 폰트 크기 축소 */
+            font-size: 20px;
+            /* 값 폰트 크기 축소 */
             font-weight: 700;
             color: var(--text-color);
         }
+
         .stat-card.highlight {
             background-color: var(--light-primary-color);
         }
+
         .stat-card.highlight .stat-value {
             color: var(--primary-color);
         }
+
         /* --- ✨ 카드 크기 축소 끝 ✨ --- */
 
         /* --- ✨ 표 가운데 정렬 및 디자인 수정 시작 ✨ --- */
@@ -159,9 +175,12 @@
             box-shadow: var(--card-shadow);
             margin-top: 2rem;
         }
+
         .table {
-            margin-bottom: 0; /* 테이블 아래 여백 제거 */
+            margin-bottom: 0;
+            /* 테이블 아래 여백 제거 */
         }
+
         .table thead th {
             background-color: #fff;
             color: var(--light-text-color);
@@ -173,28 +192,44 @@
             border-top: none;
             text-align: center;
         }
+
         .table tbody tr {
             transition: background-color 0.2s;
-            border-bottom: 1px solid var(--border-color); /* 행 구분선 */
+            border-bottom: 1px solid var(--border-color);
+            /* 행 구분선 */
         }
+
         .table tbody tr:last-of-type {
-            border-bottom: none; /* 마지막 행 구분선 제거 */
+            border-bottom: none;
+            /* 마지막 행 구분선 제거 */
         }
+
         .table tbody tr:hover {
             background-color: var(--light-primary-color);
         }
+
         .table tbody td {
             vertical-align: middle;
             padding: 15px 10px;
             text-align: center;
         }
+
         .badge {
             font-weight: 500;
             padding: 6px 10px;
             border-radius: 6px;
         }
-        .badge.bg-success { background-color: #e9f7ec !important; color: #28a745 !important; }
-        .badge.bg-danger { background-color: #fceeee !important; color: #dc3545 !important; }
+
+        .badge.bg-success {
+            background-color: #e9f7ec !important;
+            color: #28a745 !important;
+        }
+
+        .badge.bg-danger {
+            background-color: #fceeee !important;
+            color: #dc3545 !important;
+        }
+
         /* --- ✨ 표 가운데 정렬 및 디자인 수정 끝 ✨ --- */
 
         .pagination .page-item .page-link {
@@ -204,6 +239,7 @@
             color: var(--primary-color);
             transition: all 0.3s;
         }
+
         .pagination .page-item.active .page-link {
             background-color: var(--primary-color);
             color: white;
@@ -211,28 +247,31 @@
         }
     </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid main-container">
-        <a class="navbar-brand" href="/">📈 Stock Analyzer</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">하락 후 상승 분석</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/distribution' %}active{% endif %}" href="/distribution">연도별 하락 횟수</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/drawdown' %}active{% endif %}" href="/drawdown">하락 돌파 종목</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid main-container">
+            <a class="navbar-brand" href="/">📈 Stock Analyzer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">하락 후 상승 분석</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/distribution' %}active{% endif %}"
+                            href="/distribution">연도별 하락 횟수</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/drawdown' %}active{% endif %}" href="/drawdown">하락 돌파
+                            종목</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <div class="container main-container">
         <div class="analyzer-card">
             <h2 class="text-center mb-1">📉 52주 고점 대비 하락 후 상승 분석</h2>
@@ -241,20 +280,24 @@
             <form method="POST" class="row g-4 position-relative">
                 <div class="col-md-6 position-relative">
                     <label class="form-label">종목 티커 (예: AAPL)</label>
-                    <input type="text" name="ticker" id="ticker-input" class="form-control" required autocomplete="off" value="{{ form_data.ticker }}">
+                    <input type="text" name="ticker" id="ticker-input" class="form-control" required autocomplete="off"
+                        value="{{ form_data.ticker }}">
                     <ul id="autocomplete-list" class="list-group position-absolute w-100 mt-1"></ul>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">하락률 기준 (%)</label>
-                    <input type="number" name="drawdown" step="0.1" class="form-control" required placeholder="e.g. 30" value="{{ form_data.drawdown }}">
+                    <input type="number" name="drawdown" step="0.1" class="form-control" required placeholder="e.g. 30"
+                        value="{{ form_data.drawdown }}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">목표 상승률 (%)</label>
-                    <input type="number" name="target" step="0.1" class="form-control" required placeholder="e.g. 20" value="{{ form_data.target }}">
+                    <input type="number" name="target" step="0.1" class="form-control" required placeholder="e.g. 20"
+                        value="{{ form_data.target }}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">상승 확인 기간 (일)</label>
-                    <input type="number" name="days" class="form-control" required placeholder="e.g. 90" value="{{ form_data.days }}">
+                    <input type="number" name="days" class="form-control" required placeholder="e.g. 90"
+                        value="{{ form_data.days }}">
                 </div>
                 <div class="col-12 text-center mt-5">
                     <button type="submit" class="btn btn-primary w-50 submit-btn">분석 시작</button>
@@ -263,115 +306,115 @@
         </div>
 
         {% if result %}
-            {% if result.error %}
-                <div class="alert alert-danger mt-4">{{ result.error }}</div>
-            {% else %}
-                <div class="result-section mt-5">
-                    <h4 class="mb-4 text-center">📊 {{ result.ticker }} 분석 결과</h4>
+        {% if result.error %}
+        <div class="alert alert-danger mt-4">{{ result.error }}</div>
+        {% else %}
+        <div class="result-section mt-5">
+            <h4 class="mb-4 text-center">📊 {{ result.ticker }} 분석 결과</h4>
 
-                    <div class="row row-cols-2 row-cols-md-3 g-3 mb-4">
-                         <div class="col">
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                <div class="stat-title">총 하락 시점</div>
-                                <div class="stat-value">{{ result.total_cases }}회</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
-                                <div class="stat-title">{{ result.days }}일 내 상승 성공</div>
-                                <div class="stat-value">{{ result.success_cases }}회</div>
-                            </div>
-                        </div>
-                         <div class="col">
-                            <div class="stat-card highlight">
-                                <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
-                                <div class="stat-title">✅ 성공 확률</div>
-                                <div class="stat-value">{{ result.success_rate }}%</div>
-                            </div>
-                        </div>
-                        {% if result.avg_days %}
-                        <div class="col">
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
-                                <div class="stat-title">평균 달성일수</div>
-                                <div class="stat-value">{{ result.avg_days }}일</div>
-                            </div>
-                        </div>
-                        {% endif %}
-                         <div class="col">
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="fa-solid fa-dollar-sign"></i></div>
-                                <div class="stat-title">현재 종가</div>
-                                <div class="stat-value">{{ result.current_close }}</div>
-                            </div>
-                        </div>
-                         <div class="col">
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
-                                <div class="stat-title">현재 52주 고점</div>
-                                <div class="stat-value">{{ result.current_high_52w }}</div>
-                            </div>
-                        </div>
+            <div class="row row-cols-2 row-cols-md-3 g-3 mb-4">
+                <div class="col">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="stat-title">총 하락 시점</div>
+                        <div class="stat-value">{{ result.total_cases }}회</div>
                     </div>
-
-                    <div class="table-container">
-                        <div class="table-responsive">
-                            <table class="table table-borderless">
-                                <thead>
-                                    <tr>
-                                        <th>매수일</th>
-                                        <th>매수가</th>
-                                        <th>목표가</th>
-                                        <th>52주 고점</th>
-                                        <th>달성일</th>
-                                        <th>달성일수</th>
-                                        <th>달성 여부</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {% for row in result.paged_table %}
-                                    <tr>
-                                        <td>{{ row.buy_date }}</td>
-                                        <td>{{ "%.2f"|format(row.buy_price) }}</td>
-                                        <td>{{ "%.2f"|format(row.target_price) }}</td>
-                                        <td>{{ "%.2f"|format(row.high_52w) }}</td>
-                                        <td>{{ row.achieve_date or '-' }}</td>
-                                        <td>{{ row.days_to_achieve or '-' }}</td>
-                                        <td>
-                                            {% if row.achieved %}
-                                                <span class="badge bg-success">성공</span>
-                                            {% else %}
-                                                <span class="badge bg-danger">실패</span>
-                                            {% endif %}
-                                        </td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    {% if result.total_pages > 1 %}
-                        <nav class="mt-4">
-                            <ul class="pagination justify-content-center">
-                                {% for p in range(1, result.total_pages + 1) %}
-                                    <li class="page-item {% if p == result.current_page %}active{% endif %}">
-                                        <form method="post" action="/?page={{ p }}" style="display:inline;">
-                                            <input type="hidden" name="ticker" value="{{ form_data.ticker }}">
-                                            <input type="hidden" name="drawdown" value="{{ form_data.drawdown }}">
-                                            <input type="hidden" name="target" value="{{ form_data.target }}">
-                                            <input type="hidden" name="days" value="{{ form_data.days }}">
-                                            <button type="submit" class="page-link">{{ p }}</button>
-                                        </form>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </nav>
-                    {% endif %}
                 </div>
+                <div class="col">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="stat-title">{{ result.days }}일 내 상승 성공</div>
+                        <div class="stat-value">{{ result.success_cases }}회</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="stat-card highlight">
+                        <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="stat-title">✅ 성공 확률</div>
+                        <div class="stat-value">{{ result.success_rate }}%</div>
+                    </div>
+                </div>
+                {% if result.avg_days %}
+                <div class="col">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                        <div class="stat-title">평균 달성일수</div>
+                        <div class="stat-value">{{ result.avg_days }}일</div>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="col">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                        <div class="stat-title">현재 종가</div>
+                        <div class="stat-value">{{ result.current_close }}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <div class="stat-title">현재 52주 고점</div>
+                        <div class="stat-value">{{ result.current_high_52w }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th>매수일</th>
+                                <th>매수가</th>
+                                <th>목표가</th>
+                                <th>52주 고점</th>
+                                <th>달성일</th>
+                                <th>달성일수</th>
+                                <th>달성 여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in result.paged_table %}
+                            <tr>
+                                <td>{{ row.buy_date }}</td>
+                                <td>{{ "%.2f"|format(row.buy_price) }}</td>
+                                <td>{{ "%.2f"|format(row.target_price) }}</td>
+                                <td>{{ "%.2f"|format(row.high_52w) }}</td>
+                                <td>{{ row.achieve_date or '-' }}</td>
+                                <td>{{ row.days_to_achieve or '-' }}</td>
+                                <td>
+                                    {% if row.achieved %}
+                                    <span class="badge bg-success">성공</span>
+                                    {% else %}
+                                    <span class="badge bg-danger">실패</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            {% if result.total_pages > 1 %}
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                    {% for p in range(1, result.total_pages + 1) %}
+                    <li class="page-item {% if p == result.current_page %}active{% endif %}">
+                        <form method="post" action="/?page={{ p }}" style="display:inline;">
+                            <input type="hidden" name="ticker" value="{{ form_data.ticker }}">
+                            <input type="hidden" name="drawdown" value="{{ form_data.drawdown }}">
+                            <input type="hidden" name="target" value="{{ form_data.target }}">
+                            <input type="hidden" name="days" value="{{ form_data.days }}">
+                            <button type="submit" class="page-link">{{ p }}</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
             {% endif %}
+        </div>
+        {% endif %}
         {% endif %}
     </div>
 
@@ -401,7 +444,7 @@
                 console.error("Autocomplete fetch error:", error);
             }
         }
-        
+
         input.addEventListener('focus', () => showSuggestions(input.value.trim()));
         input.addEventListener('input', () => showSuggestions(input.value.trim()));
 
@@ -412,4 +455,5 @@
         });
     </script>
 </body>
+
 </html>
