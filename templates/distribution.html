@@ -13,10 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
-        /* (다른 스타일은 변경 없음) */
         :root {
             --primary-color: #007bff;
-            /* 다른 파란색 계열로 변경 */
             --light-primary-color: #e6f2ff;
             --secondary-color: #f6f8fa;
             --text-color: #333;
@@ -96,7 +94,6 @@
             transform: translateY(-2px);
         }
 
-        /* --- ✨ 변경된 부분 시작 --- */
         #autocomplete-list {
             border-radius: var(--card-radius);
             box-shadow: var(--card-shadow);
@@ -104,10 +101,7 @@
             max-height: 250px;
             overflow-y: auto;
             z-index: 1000;
-            /* 다른 요소 위에 표시되도록 z-index 추가 */
         }
-
-        /* --- ✨ 변경된 부분 끝 --- */
 
         .list-group-item-action:focus,
         .list-group-item-action:hover {
@@ -146,6 +140,8 @@
             transition: all 0.2s ease-in-out;
             color: #333;
             background-color: #f1f3f5;
+            position: relative;
+            cursor: pointer;
         }
 
         .heatmap-table td.level-0 {
@@ -177,10 +173,47 @@
         }
 
         .heatmap-table td:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             z-index: 10;
             position: relative;
+        }
+
+        /* 커스텀 툴팁 스타일 */
+        .custom-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            max-width: 300px;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .custom-tooltip.show {
+            opacity: 1;
+        }
+
+        .custom-tooltip::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .date-list {
+            margin-top: 5px;
+            font-size: 0.8rem;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -195,20 +228,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">하락 후 상승 분석</a>
+                        <a class="nav-link" href="/">하락 후 상승 분석</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/distribution' %}active{% endif %}"
-                            href="/distribution">연도별 하락 횟수</a>
+                        <a class="nav-link active" href="/distribution">연도별 하락 횟수</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/drawdown' %}active{% endif %}" href="/drawdown">하락 돌파
-                            종목</a>
+                        <a class="nav-link" href="/drawdown">하락 돌파 종목</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container main-container">
         <div class="analyzer-card">
             <h2 class="text-center mb-1">📉 연도별 하락 빈도 분석</h2>
@@ -247,18 +279,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for dd, counts in table.items() %}
+                        {% for dd in drawdowns %}
                         <tr>
                             <td><strong>-{{ dd }}%</strong></td>
                             {% for year in years %}
-                            {% set count = counts.get(year, 0) %}
+                            {% set count = table[dd][year]['count'] %}
+                            {% set dates = table[dd][year]['dates'] %}
                             {% set level = 0 %}
                             {% if count > 0 %}{% set level = 1 %}{% endif %}
                             {% if count > 2 %}{% set level = 2 %}{% endif %}
                             {% if count > 4 %}{% set level = 3 %}{% endif %}
                             {% if count > 6 %}{% set level = 4 %}{% endif %}
                             {% if count > 8 %}{% set level = 5 %}{% endif %}
-                            <td class="level-{{ level }}" title="{{count}}회">{{ count }}</td>
+                            <td class="level-{{ level }} heatmap-cell" data-count="{{ count }}"
+                                data-dates="{{ dates|join(',') }}" data-drawdown="{{ dd }}" data-year="{{ year }}">
+                                {{ count }}
+                            </td>
                             {% endfor %}
                         </tr>
                         {% endfor %}
@@ -266,7 +302,7 @@
                 </table>
             </div>
             <div class="text-center mt-3">
-                <small class="text-muted">셀 안의 숫자는 해당 조건이 발생한 횟수입니다.</small>
+                <small class="text-muted">셀 위에 마우스를 올리면 구체적인 날짜를 확인할 수 있습니다.</small>
             </div>
             {% elif ticker %}
             <div class="alert alert-warning text-center mt-4">
@@ -275,6 +311,9 @@
             {% endif %}
         </div>
     </div>
+
+    <!-- 커스텀 툴팁 -->
+    <div id="custom-tooltip" class="custom-tooltip"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -292,7 +331,6 @@
                     const li = document.createElement('li');
                     li.className = 'list-group-item list-group-item-action';
                     li.style.cursor = 'pointer';
-                    // 랭킹을 다시 표시하도록 수정
                     li.textContent = `${item.symbol} (${item.name}) - ${item.rank}위`;
                     li.addEventListener('click', () => {
                         input.value = item.symbol;
@@ -305,14 +343,62 @@
             }
         }
 
-        // 입력창에 포커스가 갔을 때, 그리고 입력값이 변경될 때 자동완성 목록 표시
         input.addEventListener('focus', () => showSuggestions(input.value.trim()));
         input.addEventListener('input', () => showSuggestions(input.value.trim()));
 
-        // 다른 곳을 클릭하면 자동완성 목록 숨기기
         document.addEventListener('click', (e) => {
             if (!input.contains(e.target)) {
                 list.innerHTML = '';
+            }
+        });
+
+        // 툴팁 기능
+        const tooltip = document.getElementById('custom-tooltip');
+        const heatmapCells = document.querySelectorAll('.heatmap-cell');
+
+        heatmapCells.forEach(cell => {
+            cell.addEventListener('mouseenter', (e) => {
+                const count = e.target.dataset.count;
+                const dates = e.target.dataset.dates;
+                const drawdown = e.target.dataset.drawdown;
+                const year = e.target.dataset.year;
+
+                if (count > 0) {
+                    const dateArray = dates.split(',');
+                    let tooltipContent = `<strong>${year}년 -${drawdown}% 하락</strong><br>`;
+                    tooltipContent += `총 ${count}회 발생`;
+
+                    if (dateArray.length > 0 && dates !== '') {
+                        tooltipContent += '<div class="date-list">';
+                        dateArray.forEach(date => {
+                            tooltipContent += `• ${date}<br>`;
+                        });
+                        tooltipContent += '</div>';
+                    }
+
+                    tooltip.innerHTML = tooltipContent;
+                    tooltip.classList.add('show');
+
+                    // 툴팁 위치 조정
+                    const rect = e.target.getBoundingClientRect();
+                    tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+                    tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+                }
+            });
+
+            cell.addEventListener('mouseleave', () => {
+                tooltip.classList.remove('show');
+            });
+        });
+
+        // 마우스 이동에 따른 툴팁 위치 업데이트 (선택사항)
+        document.addEventListener('mousemove', (e) => {
+            if (tooltip.classList.contains('show')) {
+                const rect = e.target.getBoundingClientRect();
+                if (e.target.classList.contains('heatmap-cell')) {
+                    tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
+                    tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+                }
             }
         });
     </script>

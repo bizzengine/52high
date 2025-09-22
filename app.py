@@ -193,10 +193,9 @@ def index():
 
 @app.route('/distribution', methods=['GET', 'POST'])
 def distribution():
-    # (기존 distribution 함수 내용은 변경 없음)
     table = {}
     ticker = ""
-    drawdowns = list(range(10, 85, 5))  # 20% ~ 80%
+    drawdowns = list(range(10, 85, 5))  # 10% ~ 80%
     years = list(range(2020, 2026))
     current_close = None
     current_high_52w = None
@@ -218,14 +217,18 @@ def distribution():
             data['Prev_Drawdown'] = data['Drawdown'].shift(1)
             data['Year'] = data.index.year
 
-            table = {dr: {y: 0 for y in years} for dr in drawdowns}
+            # 날짜 정보도 함께 저장하도록 수정
+            table = {dr: {y: {'count': 0, 'dates': []} for y in years} for dr in drawdowns}
 
             for dr in drawdowns:
                 condition = (data['Drawdown'] <= -dr) & (data['Prev_Drawdown'] > -dr)
                 buy_points = data[condition]
-                counts = buy_points['Year'].value_counts()
-                for y in years:
-                    table[dr][y] = int(counts.get(y, 0))
+                
+                for date_idx, row in buy_points.iterrows():
+                    year = date_idx.year
+                    if year in years:
+                        table[dr][year]['count'] += 1
+                        table[dr][year]['dates'].append(date_idx.strftime('%Y-%m-%d'))
 
             current_close = round(data['Close'].iloc[-1], 2)
             current_high_52w = round(data['52W_High'].iloc[-1], 2)
@@ -234,8 +237,14 @@ def distribution():
         except Exception as e:
             print("분석 실패:", e)
 
-    return render_template('distribution.html', table=table, ticker=ticker, drawdowns=drawdowns, years=years, current_close=current_close,
-                          current_high_52w=current_high_52w, current_drawdown=current_drawdown)
+    return render_template('distribution.html', 
+                          table=table, 
+                          ticker=ticker, 
+                          drawdowns=drawdowns, 
+                          years=years, 
+                          current_close=current_close,
+                          current_high_52w=current_high_52w, 
+                          current_drawdown=current_drawdown)
 
 
 @app.route('/drawdown')
